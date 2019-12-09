@@ -10,18 +10,18 @@ import java.util.List;
 public class Lobby {
     private List<Player> players;
 
-    private boolean IsFinished;
+    private boolean isFinished;
 
     public synchronized List<Player> getPlayers() {
         return players;
     }
 
     public boolean isFinished() {
-        return IsFinished;
+        return isFinished;
     }
 
     public void setFinished(boolean finished) {
-        IsFinished = finished;
+        isFinished = finished;
     }
 
     public Lobby(List<Player> players) {
@@ -48,7 +48,7 @@ public class Lobby {
             }
         }
 
-        jsonMessage.put(playerTemplate,jSonPlayers.toJSONString());
+        jsonMessage.put("players",jSonPlayers.toJSONString());
 
         return  jsonMessage.toJSONString();
 

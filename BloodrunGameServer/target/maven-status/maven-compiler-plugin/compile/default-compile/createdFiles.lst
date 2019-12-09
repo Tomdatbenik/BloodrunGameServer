@@ -8,6 +8,7 @@ bloodrunserver\models\Projectile.class
 bloodrunserver\icewollowutils\tcp\TCPConnectionHandler.class
 bloodrunserver\game\GameManager.class
 bloodrunserver\logic\lobby\LobbyLogic.class
+bloodrunserver\SoutLogger.class
 bloodrunserver\Application.class
 bloodrunserver\CreateTestLobby.class
 bloodrunserver\models\TrapType.class

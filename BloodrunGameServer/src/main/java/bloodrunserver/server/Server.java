@@ -5,18 +5,15 @@ import java.net.*;
 import java.util.concurrent.*;
 
 import bloodrunserver.Application;
+import bloodrunserver.SoutLogger;
 import bloodrunserver.game.GameManager;
 import bloodrunserver.icewollowutils.tcp.TCPConnectionHandler;
 import bloodrunserver.icewollowutils.udp.*;
 
 public class Server{
-    private static DatagramSocket UDPSocket;
-    private ServerSocket TCPSocket;
-    private boolean running;
-    private byte[] buf = new byte[1024];
-
-    private InetAddress address;
-    private DatagramPacket packet;
+    private static DatagramSocket udpsocket;
+    private ServerSocket tcpsocket;
+    private boolean running = false;
 
     private UDPListener reader;
 
@@ -24,10 +21,10 @@ public class Server{
 
     private static ScheduledExecutorService executor;
 
-    private static ScheduledExecutorService ScheduledMessageExecutor;
+    private static ScheduledExecutorService scheduledMessageExecutor;
 
-    public static DatagramSocket getUDPSocket() {
-        return UDPSocket;
+    public static DatagramSocket getUdpsocket() {
+        return udpsocket;
     }
 
     public static ClientManager getClientManager() {
@@ -51,32 +48,32 @@ public class Server{
         executor.scheduleAtFixedRate(clientManager,10,5, TimeUnit.SECONDS);
 
         //Create new thread pool. This thread pool is only used for game broadcasts.
-        ScheduledMessageExecutor = Executors.newScheduledThreadPool(Integer.parseInt(Application.getProperties().getProperty("Threads.max")));
+        scheduledMessageExecutor = Executors.newScheduledThreadPool(Integer.parseInt(Application.getProperties().getProperty("Threads.max")));
 
         //Schedule broadcast every 16 milliseconds with no delay.
-        ScheduledMessageExecutor.scheduleAtFixedRate(new GameManager(),0,16, TimeUnit.MILLISECONDS);
+        scheduledMessageExecutor.scheduleAtFixedRate(new GameManager(),0,16, TimeUnit.MILLISECONDS);
 
         try {
             //Try connecting UDP socket to port defined in the properties
-            UDPSocket = new DatagramSocket(Integer.parseInt(Application.getProperties().getProperty("UDP.port")));
+            udpsocket = new DatagramSocket(Integer.parseInt(Application.getProperties().getProperty("UDP.port")));
 
             //Try reading from UDP socket. This runs on a seperate thread.
             //TODO use the Threadpool
-            reader = new UDPListener(UDPSocket);
+            reader = new UDPListener(udpsocket);
             reader.start();
         } catch (SocketException e) {
-            System.out.println(e.getMessage());
+            SoutLogger.log(e.getMessage());
         }
 
         try {
             //Try connecting TCP socket to port defined in the properties
-            TCPSocket = new ServerSocket(Integer.parseInt(Application.getProperties().getProperty("TCP.port")));
+            tcpsocket = new ServerSocket(Integer.parseInt(Application.getProperties().getProperty("TCP.port")));
 
             //Connection handler uses the socket to accept incoming socket connections. See tcpconectionhandler class for more information
-            TCPConnectionHandler tcpConnectionHandler = new TCPConnectionHandler(TCPSocket);
+            TCPConnectionHandler tcpConnectionHandler = new TCPConnectionHandler(tcpsocket);
             tcpConnectionHandler.start();
         } catch (IOException e) {
-            System.out.println(e.getMessage());
+            SoutLogger.log(e.getMessage());
         }
 
         //future proofing for stop restart start server.

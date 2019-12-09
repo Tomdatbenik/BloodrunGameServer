@@ -8,12 +8,10 @@ import java.util.List;
 
 public class LobbyLogic {
 
-    private static GameLogic gameLogic;
+    private final GameLogic gameLogic = new GameLogic();;
 
     public void createLobby(List<Player> players)
     {
-        gameLogic = new GameLogic();
-
         Lobby lobby = new Lobby(players);
 
         gameLogic.createGame(lobby);

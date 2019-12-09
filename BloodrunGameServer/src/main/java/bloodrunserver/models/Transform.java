@@ -44,8 +44,8 @@ public class    Transform {
         return jsonMessage;
     }
 
-    public static Transform fromJson(String Jsonstring) {
-        Object jsonvalue = JSONValue.parse(Jsonstring);
+    public static Transform fromJson(String jsonstring) {
+        Object jsonvalue = JSONValue.parse(jsonstring);
         JSONObject object = (JSONObject) jsonvalue;
 
         String slocation = object.get("location").toString();

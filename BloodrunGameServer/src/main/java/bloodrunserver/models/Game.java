@@ -1,6 +1,7 @@
 package bloodrunserver.models;
 
 import bloodrunserver.Application;
+import bloodrunserver.SoutLogger;
 import bloodrunserver.icewollowutils.models.Message;
 import bloodrunserver.icewollowutils.models.MessageType;
 import org.json.simple.JSONArray;
@@ -57,7 +58,7 @@ public class Game {
                     player.getClient().sendUDPMessage(message);
                 }
             } catch (IOException e) {
-                System.out.println(e.getMessage());
+                SoutLogger.log(e.getMessage());
             }
         }
     }

@@ -1,5 +1,6 @@
 package bloodrunserver.icewollowutils.tcp;
 
+import bloodrunserver.SoutLogger;
 import bloodrunserver.icewollowutils.models.Message;
 import bloodrunserver.icewollowutils.models.MessageType;
 import bloodrunserver.server.Client;
@@ -24,7 +25,8 @@ public class TCPConnectionHandler extends Thread {
     @Override
     public void run() {
         super.run();
-        System.out.println("TCPConnectionHandler Started.");
+        SoutLogger.log("TCPConnectionHandler Started.");
+
         while(true)
         {
             try {
@@ -33,7 +35,7 @@ public class TCPConnectionHandler extends Thread {
                 //Server has accepted the connection from another tcp socket.
                 linkClient(s);
             } catch (IOException e) {
-                System.out.println(e.getMessage());
+                SoutLogger.log(e.getMessage());
             }
         }
     }

@@ -25,13 +25,13 @@ public class Rotation {
     }
 
     public JSONObject toJson() {
-        JSONObject JsonMessage = new JSONObject();
-        JsonMessage.put("x", this.x);
-        JsonMessage.put("y", this.y);
-        JsonMessage.put("z", this.z);
-        JsonMessage.put("w", this.w);
+        JSONObject jsonMessage = new JSONObject();
+        jsonMessage.put("x", this.x);
+        jsonMessage.put("y", this.y);
+        jsonMessage.put("z", this.z);
+        jsonMessage.put("w", this.w);
 
-        return JsonMessage;
+        return jsonMessage;
     }
 
     public static Rotation fromJson(String jsonstring) {

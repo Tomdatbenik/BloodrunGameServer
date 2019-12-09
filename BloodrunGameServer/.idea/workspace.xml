@@ -7,6 +7,16 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="114" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -39,7 +49,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.Java in BloodrunGameServer">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="bloodrunserver.Application" />
       <module name="BloodrunGameServer" />
@@ -53,9 +63,58 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GameLogicTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BloodrunGameServer" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GameLogicTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameLogicTests.CreateGameSucces" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BloodrunGameServer" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GameLogicTests" />
+      <option name="METHOD_NAME" value="CreateGameSucces" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Java in BloodrunGameServer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BloodrunGameServer" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/Test/Java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MessageExecutorTest [10000]" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true" repeat_count="10000" repeat_mode="N Times">
+      <module name="BloodrunGameServer" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MessageExecutorTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Application" />
+      <item itemvalue="JUnit.GameLogicTests" />
+      <item itemvalue="JUnit.GameLogicTests.CreateGameSucces" />
+      <item itemvalue="JUnit.Java in BloodrunGameServer" />
+      <item itemvalue="JUnit.MessageExecutorTest [10000]" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Java in BloodrunGameServer" />
+        <item itemvalue="JUnit.MessageExecutorTest [10000]" />
         <item itemvalue="Application.Application" />
+        <item itemvalue="JUnit.GameLogicTests.CreateGameSucces" />
+        <item itemvalue="JUnit.GameLogicTests" />
       </list>
     </recent_temporary>
   </component>
@@ -83,6 +142,8 @@
       <updated>1575890032586</updated>
       <workItem from="1575890033782" duration="384000" />
       <workItem from="1575890675864" duration="4109000" />
+      <workItem from="1575895621257" duration="167000" />
+      <workItem from="1575895909753" duration="7110000" />
     </task>
     <servers />
   </component>
@@ -94,49 +155,76 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="552" y="198" key="#Project_Structure/0.0.1920.1080@0.0.1920.1080" timestamp="1575890244260" />
+    <state x="414" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575902418905">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="414" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575902418905" />
+    <state x="765" y="240" key="#com.intellij.ide.util.MemberChooser" timestamp="1575899415774">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="765" y="240" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1575899415774" />
     <state x="808" y="428" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1575890208852">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="808" y="428" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575890208852" />
+    <state x="704" y="110" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1575898542267">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="704" y="110" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575898542267" />
+    <state width="424" height="466" key="DebuggerActiveHint" timestamp="1575896357951">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="424" height="466" key="DebuggerActiveHint/0.0.1920.1080@0.0.1920.1080" timestamp="1575896357951" />
     <state x="635" y="249" key="FileChooserDialogImpl" timestamp="1575890242168">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="635" y="249" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1575890242168" />
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1575895479064">
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1575902857396">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1575895479064" />
-    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1575895479064">
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1575902857396" />
+    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1575902857396">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1575895479064" />
-    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1575895479064">
+    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1575902857396" />
+    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1575902857396">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1575895479064" />
-    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1575895479064">
+    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1575902857396" />
+    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1575902857396">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1575895479064" />
-    <state width="1877" height="363" key="GridCell.Tab.1.bottom" timestamp="1575890417601">
+    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1575902857396" />
+    <state width="1877" height="363" key="GridCell.Tab.1.bottom" timestamp="1575902376165">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1575890417601" />
-    <state width="1877" height="363" key="GridCell.Tab.1.center" timestamp="1575890417601">
+    <state width="1877" height="363" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1575902376165" />
+    <state width="1877" height="363" key="GridCell.Tab.1.center" timestamp="1575902376165">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1575890417601" />
-    <state width="1877" height="363" key="GridCell.Tab.1.left" timestamp="1575890417601">
+    <state width="1877" height="363" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1575902376165" />
+    <state width="1877" height="363" key="GridCell.Tab.1.left" timestamp="1575902376165">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1575890417601" />
-    <state width="1877" height="363" key="GridCell.Tab.1.right" timestamp="1575890417601">
+    <state width="1877" height="363" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1575902376165" />
+    <state width="1877" height="363" key="GridCell.Tab.1.right" timestamp="1575902376165">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1575890417601" />
-    <state x="656" y="363" key="com.intellij.ide.util.TipDialog" timestamp="1575890449338">
+    <state width="1877" height="363" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1575902376165" />
+    <state x="656" y="363" key="com.intellij.ide.util.TipDialog" timestamp="1575895909746">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575890449338" />
+    <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575895909746" />
+    <state x="616" y="250" key="run.anything.popup" timestamp="1575896062750">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="616" y="250" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1575896062750" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/BloodrunGameServer$Application.ic" NAME="Application Coverage Results" MODIFIED="1575902023590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>bloodrunserver.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/BloodrunGameServer$Java_in_BloodrunGameServer.ic" NAME="Java in BloodrunGameServer Coverage Results" MODIFIED="1575902857372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/BloodrunGameServer$Test_in_BloodrunGameServer.ic" NAME="Test in BloodrunGameServer Coverage Results" MODIFIED="1575898871092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

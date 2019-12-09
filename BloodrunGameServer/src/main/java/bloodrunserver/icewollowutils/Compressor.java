@@ -7,7 +7,7 @@ import java.util.zip.GZIPOutputStream;
 public class Compressor {
 
     private Compressor() {}
-    private static final String charsertname = "UTF-8";
+    private static final String CHARSERT_NAME = "UTF-8";
 
     public static byte[] compress(String str) throws IOException {
         byte[] data = str.getBytes();
@@ -23,7 +23,7 @@ public class Compressor {
     public static String decompress(byte[] compressed) throws IOException {
         ByteArrayInputStream bis = new ByteArrayInputStream(compressed);
         GZIPInputStream gis = new GZIPInputStream(bis);
-        BufferedReader br = new BufferedReader(new InputStreamReader(gis, charsertname));
+        BufferedReader br = new BufferedReader(new InputStreamReader(gis, CHARSERT_NAME));
         StringBuilder sb = new StringBuilder();
 
         String line;
@@ -37,11 +37,9 @@ public class Compressor {
     }
 
     public static String decompressString(String compressed) throws IOException {
-        System.out.println(compressed);
-
-        ByteArrayInputStream bis = new ByteArrayInputStream(compressed.getBytes(charsertname));
+        ByteArrayInputStream bis = new ByteArrayInputStream(compressed.getBytes(CHARSERT_NAME));
         GZIPInputStream gis = new GZIPInputStream(bis);
-        BufferedReader br = new BufferedReader(new InputStreamReader(gis, charsertname));
+        BufferedReader br = new BufferedReader(new InputStreamReader(gis, CHARSERT_NAME));
         StringBuilder sb = new StringBuilder();
         String line;
         while((line = br.readLine()) != null) {

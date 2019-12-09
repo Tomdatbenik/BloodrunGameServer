@@ -12,11 +12,11 @@ public class Projectile {
     }
 
     public JSONObject toJson() {
-        JSONObject JsonMessage = new JSONObject();
+        JSONObject jsonMessage = new JSONObject();
 
-        JsonMessage.put("transform", this.transform.toJson().toJSONString());
+        jsonMessage.put("transform", this.transform.toJson().toJSONString());
 
-        return JsonMessage;
+        return jsonMessage;
     }
 
     public static Projectile fromJson(String jsonstring) {

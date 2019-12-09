@@ -1,5 +1,6 @@
 package bloodrunserver.icewollowutils.udp;
 
+import bloodrunserver.SoutLogger;
 import bloodrunserver.server.Server;
 
 import java.io.IOException;
@@ -14,7 +15,7 @@ public class UDPWriter implements Runnable {
         //UDP needs a Socket and A Packet.
         //Socket is the port it will send from, this is opened in the Server
         //Packet has the data in bytes (GZIP), Address and Port belonging to the unity client.
-        this.socket = Server.getUDPSocket();
+        this.socket = Server.getUdpsocket();
         this.packet = packet;
     }
 
@@ -28,7 +29,7 @@ public class UDPWriter implements Runnable {
             //Sends Message to unity client with UDP
             socket.send(packet);
         } catch (IOException e) {
-           System.out.println(e.getMessage());
+           SoutLogger.log(e.getMessage());
         }
     }
 }

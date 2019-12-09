@@ -44,15 +44,14 @@ public class Application {
     public static void setUpProperties()
     {
         //Create new instance to get class type, this instance isn't used afterwards.
-        Application main = new Application();
         InputStream input = null;
 
-        input = main.getClass().getClassLoader().getResourceAsStream("config.properties");
+        input = Application.class.getClassLoader().getResourceAsStream("config.properties");
 
         try {
             properties.load(input);
         } catch (IOException e) {
-            System.err.println(e.getMessage());
+            SoutLogger.log(e.getMessage());
         }
     }
 }

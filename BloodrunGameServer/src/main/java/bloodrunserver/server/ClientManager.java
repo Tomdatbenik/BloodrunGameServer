@@ -1,5 +1,6 @@
 package bloodrunserver.server;
 
+import bloodrunserver.SoutLogger;
 import bloodrunserver.models.Game;
 import bloodrunserver.game.GameCollection;
 import bloodrunserver.models.Player;
@@ -9,11 +10,11 @@ import java.util.List;
 
 public class ClientManager implements Runnable{
 
-    private static List<Client> MatchedClients = new ArrayList<Client>();
+    private static List<Client> matchedClients = new ArrayList<Client>();
 
     public void run() {
         //Announce matching clients in console
-        System.out.println("Matching clients on thread: " + Thread.currentThread());
+        SoutLogger.log("Matching clients on thread: " + Thread.currentThread());
 
         matchClients();
     }
@@ -33,13 +34,13 @@ public class ClientManager implements Runnable{
                         player.setConnected(true);
                         //System.out.println("Matched player: " + player.getUsername());
                         //Add client to matched client list to remove it from the client collection
-                        MatchedClients.add(client);
+                        matchedClients.add(client);
                     }
                 }
             }
         }
 
-        for (Client client : MatchedClients)
+        for (Client client : matchedClients)
         {
             //Remove client from client collection
             ClientCollection.getClients().remove(client);

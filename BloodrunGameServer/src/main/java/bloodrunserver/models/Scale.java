@@ -46,12 +46,12 @@ public class Scale {
     }
 
     public JSONObject toJson() {
-        JSONObject JsonMessage = new JSONObject();
-        JsonMessage.put("x", this.x);
-        JsonMessage.put("y", this.y);
-        JsonMessage.put("z", this.z);
+        JSONObject jsonMessage = new JSONObject();
+        jsonMessage.put("x", this.x);
+        jsonMessage.put("y", this.y);
+        jsonMessage.put("z", this.z);
 
-        return JsonMessage;
+        return jsonMessage;
     }
 
     public static Scale fromJson(String jsonstring) {
@@ -62,7 +62,6 @@ public class Scale {
         String y = object.get("y").toString();
         String z = object.get("z").toString();
 
-        Scale scale = new Scale(x, y, z);
-        return scale;
+        return new Scale(x, y, z);
     }
 }

@@ -1,12 +1,16 @@
 package bloodrunserver.server;
 
+import bloodrunserver.SoutLogger;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class ClientCollection {
 
+    private ClientCollection(){}
+
     //Stores clients
-    private final static List<Client> clients = new ArrayList<Client>();
+    private static final List<Client> clients = new ArrayList<Client>();
 
     public static List<Client> getClients() {
         return clients;
@@ -14,7 +18,7 @@ public class ClientCollection {
 
     public static void add(Client client)
     {
-        System.out.println(client+ " Username: " + client.username);
+        SoutLogger.log(client+ " Username: " + client.username);
         clients.add(client);
     }
 }

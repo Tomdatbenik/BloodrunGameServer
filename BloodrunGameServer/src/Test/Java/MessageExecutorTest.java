@@ -3,7 +3,11 @@ import bloodrunserver.communicatie.MessageExecutor;
 import bloodrunserver.game.GameCollection;
 import bloodrunserver.icewollowutils.models.Message;
 import bloodrunserver.icewollowutils.models.MessageType;
+import bloodrunserver.logic.game.GameLogic;
+import bloodrunserver.logic.player.PlayerLogic;
+import bloodrunserver.models.Game;
 import bloodrunserver.models.Lobby;
+import bloodrunserver.models.Location;
 import bloodrunserver.models.Player;
 import bloodrunserver.server.Server;
 import org.junit.Assert;
@@ -14,7 +18,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MessageExecutorTest {
-    static final Application main = new Application();;
+    static final Application main = new Application();
+    private final GameLogic gameLogic = new GameLogic();
+    private final PlayerLogic playerLogic = new PlayerLogic();
 
     @BeforeClass
     public static void Setup()
@@ -23,10 +29,8 @@ public class MessageExecutorTest {
         main.startServer();
     }
 
-    public static List<Message> AddMessagesToBuffer()
+    public static void AddGamesToExecutor()
     {
-        List<Message> messages = new ArrayList<Message>();
-
         List<Player> players = new ArrayList<Player>();
 
         players.add(new Player("Tomdatbenik"));
@@ -52,11 +56,6 @@ public class MessageExecutorTest {
         Message message1 = new Message("WebSocket", lobby.toJson(), MessageType.CREATE_LOBBY);
 
         Server.getExecutor().submit(new MessageExecutor(message1));
-
-        messages.add(message);
-        messages.add(message1);
-
-        return messages;
     }
 
 //    @Test
@@ -81,8 +80,8 @@ public class MessageExecutorTest {
 //    }
 
     @Test
-    public void TestAddMultipleMessage()  {
-        AddMessagesToBuffer();
+    public void TestAddMultipleGames()  {
+        AddGamesToExecutor();
 
         while(GameCollection.getGames().size() != 2)
         {
@@ -96,9 +95,42 @@ public class MessageExecutorTest {
         }
         else if(GameCollection.getGames().get(0).getPlayers().get(0).getUsername().equals("Tomdatbenik"))
         {
+            List<Game> games = GameCollection.getGames();
             Assert.assertEquals("Tomdatbenik", GameCollection.getGames().get(0).getPlayers().get(0).getUsername());
             Assert.assertEquals("Henk", GameCollection.getGames().get(1).getPlayers().get(0).getUsername());
         }
+
+        GameCollection.getGames().clear();
+    }
+
+    @Test
+    public void TestMovePlayer()
+    {
+        Application.setUpProperties();
+
+        List<Player> players = new ArrayList<Player>();
+
+        players.add(new Player("Tomdatbenik"));
+        players.add(new Player("Mario"));
+        players.add(new Player("MrLuigi"));
+        players.add(new Player("SkullCrusher"));
+
+        Lobby lobby = new Lobby(players);
+
+        gameLogic.createGame(lobby);
+
+        Player player = players.get(0);
+
+        player.getTransform().setLocation(new Location("3","3", "3"));
+
+        Server.getExecutor().submit(new MessageExecutor(
+                new Message(player.getUsername(),
+                player.getTransform().getLocation().toJson().toJSONString(),
+                MessageType.MOVE)));
+
+        Assert.assertEquals("3", GameCollection.getGames().get(0).getPlayers().get(0).getTransform().getLocation().getY());
+        Assert.assertEquals("3", GameCollection.getGames().get(0).getPlayers().get(0).getTransform().getLocation().getX());
+        Assert.assertEquals("3", GameCollection.getGames().get(0).getPlayers().get(0).getTransform().getLocation().getZ());
 
         GameCollection.getGames().clear();
     }

@@ -1,6 +1,7 @@
 package bloodrunserver.models;
 
 import bloodrunserver.Application;
+import bloodrunserver.SoutLogger;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
@@ -49,9 +50,9 @@ public class Dungeon {
             }
 
         } catch (IOException e) {
-            System.err.println(e.getMessage());
+            SoutLogger.log(e.getMessage());
         } catch (ParseException e) {
-            System.err.println(e.getMessage());
+            SoutLogger.log(e.getMessage());
         }
     }
 }

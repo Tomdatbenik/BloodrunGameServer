@@ -13,7 +13,6 @@ public class MessageExecutor implements Runnable{
     private static final LobbyLogic lobbyLogic = new LobbyLogic();
     private static final PlayerLogic PlayerLogic = new PlayerLogic();
 
-
     public MessageExecutor(Message newMessage)
     {
         synchronized (this.message)
@@ -25,7 +24,6 @@ public class MessageExecutor implements Runnable{
     }
 
     public synchronized void run() {
-        //TODO if or switch case on messageType.
         switch (message.getType()) {
             case CREATE_LOBBY:
                 createLobby();

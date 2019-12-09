@@ -65,12 +65,12 @@ public class Message {
 
     //Creates JsonObject from message.
     public JSONObject toJson() {
-        JSONObject JsonMessage = new JSONObject();
-        JsonMessage.put("sender", this.getSender());
-        JsonMessage.put("type", this.getType().getValue());
-        JsonMessage.put("content", this.getContent());
+        JSONObject jsonMessage = new JSONObject();
+        jsonMessage.put("sender", this.getSender());
+        jsonMessage.put("type", this.getType().getValue());
+        jsonMessage.put("content", this.getContent());
 
-        return JsonMessage;
+        return jsonMessage;
     }
 
     //Creates message from JsonString

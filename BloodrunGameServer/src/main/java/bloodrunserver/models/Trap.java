@@ -23,20 +23,20 @@ public class Trap {
     }
 
     public JSONObject toJson() {
-        JSONObject JsonMessage = new JSONObject();
+        JSONObject jsonMessage = new JSONObject();
 
-        JsonMessage.put("id", this.id);
-        JsonMessage.put("transform", this.transform.toJson());
-        JsonMessage.put("scale", this.scale.toJson());
-        JsonMessage.put("activated", this.activated);
-        JsonMessage.put("type", this.type.getValue());
+        jsonMessage.put("id", this.id);
+        jsonMessage.put("transform", this.transform.toJson());
+        jsonMessage.put("scale", this.scale.toJson());
+        jsonMessage.put("activated", this.activated);
+        jsonMessage.put("type", this.type.getValue());
 
 
-        return JsonMessage;
+        return jsonMessage;
     }
 
-    public static Trap fromJson(String Jsonstring) {
-        Object jsonvalue = JSONValue.parse(Jsonstring);
+    public static Trap fromJson(String jsonstring) {
+        Object jsonvalue = JSONValue.parse(jsonstring);
         JSONObject object = (JSONObject) jsonvalue;
 
         String sid = object.get("id").toString();
@@ -49,9 +49,8 @@ public class Trap {
         Scale scale = Scale.fromJson(sscale);
         Boolean activated = Boolean.getBoolean(object.get("activated").toString());
         TrapType type = TrapType.fromInteger(Integer.parseInt(stype));
-        Trap trap = new Trap(id,transform,scale,activated,type);
 
-        return trap;
+        return new Trap(id,transform,scale,activated,type);
     }
 
 }

@@ -1,5 +1,6 @@
 package bloodrunserver.icewollowutils.tcp;
 
+import bloodrunserver.SoutLogger;
 import bloodrunserver.icewollowutils.Compressor;
 import bloodrunserver.icewollowutils.models.Message;
 
@@ -23,14 +24,12 @@ public class TCPWriter implements Runnable{
             dataOutputStream= new DataOutputStream(socket.getOutputStream());
             byte[] msg = Compressor.compress(message.toJson().toString());
 
-            System.out.println(msg);
-
             dataOutputStream.write(msg);
             dataOutputStream.flush();
 
-            System.out.println("Sending TCP message: " + message.toString());
+            SoutLogger.log("Sending TCP message: " + message.toString());
         } catch (IOException e) {
-            System.out.println(e.getMessage());
+            SoutLogger.log(e.getMessage());
         }
     }
 }

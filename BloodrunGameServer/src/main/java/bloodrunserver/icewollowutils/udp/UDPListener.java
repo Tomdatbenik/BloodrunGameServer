@@ -1,5 +1,6 @@
 package bloodrunserver.icewollowutils.udp;
-
+;
+import bloodrunserver.SoutLogger;
 import bloodrunserver.communicatie.MessageExecutor;
 import bloodrunserver.icewollowutils.Compressor;
 import bloodrunserver.icewollowutils.models.Message;
@@ -8,7 +9,6 @@ import bloodrunserver.server.Server;
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
-import java.net.SocketException;
 
 public class UDPListener extends Thread{
     private DatagramSocket socket;
@@ -22,13 +22,13 @@ public class UDPListener extends Thread{
 
     @Override
     public void run() {
-        System.out.println("UDPReader Started.");
+        SoutLogger.log("UDPReader Started.");
 
         while(true) {
             try {
                 read();
             } catch (IOException e) {
-                System.out.println(e.getMessage());
+                SoutLogger.log(e.getMessage());
             }
         }
     }

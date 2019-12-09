@@ -1,5 +1,6 @@
 package bloodrunserver.icewollowutils.tcp;
 
+import bloodrunserver.SoutLogger;
 import bloodrunserver.communicatie.MessageExecutor;
 import bloodrunserver.icewollowutils.models.Message;
 import bloodrunserver.server.Server;
@@ -22,7 +23,7 @@ public class TCPListener extends Thread{
     @Override
     public void run() {
         super.run();
-        System.out.println("Started listening on thread: " + this);
+        SoutLogger.log("Started listening on thread: " + this);
         while (Boolean.TRUE.equals(isOpen))
         {
             try {
@@ -33,14 +34,14 @@ public class TCPListener extends Thread{
                     addToBuffer(msg);
                 }
             } catch (IOException e) {
-                System.out.println(e.getMessage());
+                SoutLogger.log(e.getMessage());
                 isOpen = false;
                 try {
                     socket.close();
-                    System.out.println("Socket closed");
+                    SoutLogger.log("Socket closed");
                 } catch (IOException ex) {
-                    System.out.println("Socket can't be closed");
-                    System.err.println(ex.getMessage());
+                    SoutLogger.log("Socket can't be closed");
+                    SoutLogger.log(e.getMessage());
                 }
             }
         }
@@ -60,13 +61,12 @@ public class TCPListener extends Thread{
             sb.append((char)c);
         }
 
-        String Json = sb.toString();
+        String json = sb.toString();
 
-        if(Json != null)
+        if(json != null)
         {
-            System.out.println(Json);
-            Message message = Message.fromJson(Json);
-            return message;
+            SoutLogger.log("TCPListener read: " + json);
+            return Message.fromJson(json);
         }
 
         return null;
