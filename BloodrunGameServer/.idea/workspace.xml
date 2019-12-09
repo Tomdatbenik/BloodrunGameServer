@@ -21,6 +21,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -68,6 +69,7 @@
       <option name="presentableId" value="Default" />
       <updated>1575890032586</updated>
       <workItem from="1575890033782" duration="384000" />
+      <workItem from="1575890675864" duration="963000" />
     </task>
     <servers />
   </component>
@@ -87,22 +89,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="635" y="249" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1575890242168" />
-    <state width="1877" height="363" key="GridCell.Tab.0.bottom" timestamp="1575890417601">
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1575891037927">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1575890417601" />
-    <state width="1877" height="363" key="GridCell.Tab.0.center" timestamp="1575890417601">
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1575891037927" />
+    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1575891037927">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1575890417601" />
-    <state width="1877" height="363" key="GridCell.Tab.0.left" timestamp="1575890417601">
+    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1575891037927" />
+    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1575891037926">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1575890417601" />
-    <state width="1877" height="363" key="GridCell.Tab.0.right" timestamp="1575890417601">
+    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1575891037926" />
+    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1575891037927">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1575890417601" />
+    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1575891037927" />
     <state width="1877" height="363" key="GridCell.Tab.1.bottom" timestamp="1575890417601">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
