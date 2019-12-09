@@ -26,8 +26,7 @@ public class Dungeon {
     {
         JSONParser parser = new JSONParser();
         //Create new instance to get class type, this instance isn't used afterwards.
-        Application main = new Application();
-        URL resource = main.getClass().getClassLoader().getResource("dungeon.json");
+        URL resource = Application.class.getClassLoader().getResource("dungeon.json");
 
         Object input = null;
 

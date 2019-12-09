@@ -57,16 +57,16 @@ public class Player {
     }
 
     public JSONObject toJson() {
-        JSONObject JsonMessage = new JSONObject();
-        JsonMessage.put("username", this.username);
-        JsonMessage.put("transform", this.transform.toJson());
-        JsonMessage.put("connected", this.connected);
+        JSONObject jsonMessage = new JSONObject();
+        jsonMessage.put("username", this.username);
+        jsonMessage.put("transform", this.transform.toJson());
+        jsonMessage.put("connected", this.connected);
 
-        return JsonMessage;
+        return jsonMessage;
     }
 
-    public static Player fromJson(String Jsonstring) {
-        Object jsonvalue = JSONValue.parse(Jsonstring);
+    public static Player fromJson(String jsonstring) {
+        Object jsonvalue = JSONValue.parse(jsonstring);
         JSONObject object = (JSONObject) jsonvalue;
 
         String susername = object.get("username").toString();
@@ -74,7 +74,6 @@ public class Player {
 
         Transform transform = Transform.fromJson(stransform);
 
-        Player player = new Player(susername,transform);
-        return player;
+        return new Player(susername,transform);
     }
 }

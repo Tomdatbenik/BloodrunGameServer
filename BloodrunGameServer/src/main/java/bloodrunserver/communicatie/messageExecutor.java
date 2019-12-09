@@ -7,14 +7,14 @@ import bloodrunserver.models.Lobby;
 import bloodrunserver.models.Player;
 import bloodrunserver.server.Server;
 
-public class messageExecutor implements Runnable{
+public class MessageExecutor implements Runnable{
 
     private final Message message = new Message();
     private static final LobbyLogic lobbyLogic = new LobbyLogic();
     private static final PlayerLogic PlayerLogic = new PlayerLogic();
 
 
-    public messageExecutor(Message newMessage)
+    public MessageExecutor(Message newMessage)
     {
         synchronized (this.message)
         {
@@ -28,22 +28,16 @@ public class messageExecutor implements Runnable{
         //TODO if or switch case on messageType.
         switch (message.getType()) {
             case CREATE_LOBBY:
-            {
-                //TODO If your in release mode this has to be commented out or else the messagereader will fail
-                //System.out.println(Thread.currentThread() +"Executing: " + message.toString());
                 createLobby();
                 break;
-            }
             case DISCONNECT:
-            {
                 disconnectClient();
                 break;
-            }
             case MOVE:
-            {
                 movePlayer();
                 break;
-            }
+            default:
+                break;
         }
     }
 

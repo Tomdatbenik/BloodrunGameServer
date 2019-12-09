@@ -19,15 +19,14 @@ public class Projectile {
         return JsonMessage;
     }
 
-    public static Projectile fromJson(String Jsonstring) {
-        Object jsonvalue = JSONValue.parse(Jsonstring);
+    public static Projectile fromJson(String jsonstring) {
+        Object jsonvalue = JSONValue.parse(jsonstring);
         JSONObject object = (JSONObject) jsonvalue;
 
         String stransform = object.get("transform").toString();
 
         Transform transform = Transform.fromJson(stransform);
 
-        Projectile projectile = new Projectile(transform);
-        return projectile;
+        return new Projectile(transform);
     }
 }

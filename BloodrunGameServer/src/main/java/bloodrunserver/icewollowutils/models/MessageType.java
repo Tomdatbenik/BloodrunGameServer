@@ -9,7 +9,7 @@ public enum MessageType {
     CONNECT(Integer.parseInt(Application.getProperties().getProperty("message.Type.Connect"))),
     DISCONNECT(Integer.parseInt(Application.getProperties().getProperty("message.Type.Disconnect"))),
     MOVE(Integer.parseInt(Application.getProperties().getProperty("message.Type.Move"))),
-    UDPRequest(Integer.parseInt(Application.getProperties().getProperty("message.Type.UDPRequest"))),
+    UDP_REQUEST(Integer.parseInt(Application.getProperties().getProperty("message.Type.UDPRequest"))),
     GAME(Integer.parseInt(Application.getProperties().getProperty("message.Type.Game"))),
     CREATE_LOBBY(Integer.parseInt(Application.getProperties().getProperty("message.Type.CreateLobby")));
 
@@ -40,7 +40,7 @@ public enum MessageType {
         }
         else if(x == Integer.parseInt(Application.getProperties().getProperty("message.Type.UDPRequest")))
         {
-            return UDPRequest;
+            return UDP_REQUEST;
         }
         else if(x == Integer.parseInt(Application.getProperties().getProperty("message.Type.Game")))
         {

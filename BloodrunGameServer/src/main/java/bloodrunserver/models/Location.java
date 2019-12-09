@@ -53,15 +53,14 @@ public class Location {
         return JsonMessage;
     }
 
-    public static Location fromJson(String Jsonstring) {
-        Object jsonvalue = JSONValue.parse(Jsonstring);
+    public static Location fromJson(String jsonstring) {
+        Object jsonvalue = JSONValue.parse(jsonstring);
         JSONObject object = (JSONObject) jsonvalue;
 
         String x = object.get("x").toString();
         String y = object.get("y").toString();
         String z = object.get("z").toString();
 
-        Location location = new Location(x, y, z);
-        return location;
+        return new Location(x, y, z);
     }
 }

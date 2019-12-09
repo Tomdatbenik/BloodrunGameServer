@@ -10,6 +10,8 @@ public class GameCollection {
     //All live games.
     private static final List<Game> games = new ArrayList<Game>();
 
+    private GameCollection(){}
+
     //Makes games public!!!!
     //returns the games list.
     public static List<Game> getGames() {

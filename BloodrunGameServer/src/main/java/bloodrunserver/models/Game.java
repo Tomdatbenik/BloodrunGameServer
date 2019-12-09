@@ -18,8 +18,8 @@ public class Game {
     private List<Trap> traps = new ArrayList<Trap>();
     private Dungeon dungeon;
 
-    private boolean IsFinished = false;
-    private Player winner;
+    private boolean isFinished = false;
+    private Player winner = null;
 
 
     public Game(List<Player> players) {
@@ -38,11 +38,11 @@ public class Game {
     }
 
     public boolean isFinished() {
-        return IsFinished;
+        return isFinished;
     }
 
     public void setFinished(boolean finished) {
-        IsFinished = finished;
+        isFinished = finished;
     }
 
     //TODO Create JSON Encoder and Decoder
@@ -63,30 +63,29 @@ public class Game {
     }
 
     public JSONObject toJson() {
-        JSONObject JsonMessage = new JSONObject();
+        JSONObject jsonObject = new JSONObject();
 
         //Players
-        JSONObject JSonPlayers = new JSONObject();
+        JSONObject jsonplayers = new JSONObject();
 
         for(int i = 1; i <= Integer.parseInt(Application.getProperties().getProperty("Game.Maxplayers")); i++)
         {
             Player player = players.get(i-1);
 
-            JSonPlayers.put("player_" + i, player.toJson());
-
+            jsonplayers.put("player_" + i, player.toJson());
         }
 
-        JsonMessage.put("players",JSonPlayers);
+        jsonObject.put("players",jsonplayers);
 
         //Projectiles
-        JSONObject JsonProjectiles = new JSONObject();
+        JSONObject jsonProjectiles = new JSONObject();
 
         for (Projectile projectile : projectiles)
         {
-            JsonProjectiles.put("projectile", projectile.toJson());
+            jsonProjectiles.put("projectile", projectile.toJson());
         }
 
-        JsonMessage.put("projectiles",JsonProjectiles);
+        jsonObject.put("projectiles",jsonProjectiles);
 
         //Traps
         JSONArray jatraps = new JSONArray();
@@ -96,18 +95,10 @@ public class Game {
             jatraps.add(trap.toJson());
         }
 
-        JsonMessage.put("traps", jatraps);
+        jsonObject.put("traps", jatraps);
 
-        for(int i = 1; i <= Integer.parseInt(Application.getProperties().getProperty("Game.Maxplayers")); i++)
-        {
-            Player player = players.get(i-1);
+        jsonObject.put("players",jsonplayers);
 
-            JSonPlayers.put("player_" + i, player.toJson());
-
-        }
-
-        JsonMessage.put("players",JSonPlayers);
-
-        return JsonMessage;
+        return jsonObject;
     }
 }

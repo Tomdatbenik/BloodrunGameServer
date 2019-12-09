@@ -1,6 +1,6 @@
 package bloodrunserver.icewollowutils.udp;
 
-import bloodrunserver.communicatie.messageExecutor;
+import bloodrunserver.communicatie.MessageExecutor;
 import bloodrunserver.icewollowutils.Compressor;
 import bloodrunserver.icewollowutils.models.Message;
 import bloodrunserver.server.Server;
@@ -14,7 +14,7 @@ public class UDPListener extends Thread{
     private DatagramSocket socket;
     private DatagramPacket packet;
 
-    public UDPListener(DatagramSocket socket) throws SocketException {
+    public UDPListener(DatagramSocket socket) {
         this.socket = socket;
         byte[] ary = new byte[1024];
         this.packet = new DatagramPacket(ary, 1024);
@@ -42,12 +42,6 @@ public class UDPListener extends Thread{
 
         Message message = Message.fromJson(data);
 
-        Server.getExecutor().submit(new messageExecutor(message));
-
-        //MessageBuffer.Add(message);
-//        MessageBuffer.Add(message);
-//        Client client = new Client(packet.getAddress(),packet.getPort());
-//
-//        System.out.println(client.ToString());
+        Server.getExecutor().submit(new MessageExecutor(message));
     }
 }

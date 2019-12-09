@@ -11,6 +11,7 @@ bloodrunserver\logic\lobby\LobbyLogic.class
 bloodrunserver\Application.class
 bloodrunserver\CreateTestLobby.class
 bloodrunserver\models\TrapType.class
+bloodrunserver\communicatie\MessageExecutor$1.class
 bloodrunserver\icewollowutils\tcp\TCPListener.class
 bloodrunserver\logic\projectile\ProjectileLogic.class
 bloodrunserver\models\Character.class
@@ -23,9 +24,8 @@ bloodrunserver\models\Spawnpoint.class
 bloodrunserver\models\Dungeon.class
 bloodrunserver\models\Location.class
 bloodrunserver\models\Player.class
-bloodrunserver\communicatie\messageExecutor.class
 bloodrunserver\models\Rotation.class
-bloodrunserver\communicatie\messageExecutor$1.class
+bloodrunserver\communicatie\MessageExecutor.class
 bloodrunserver\logic\player\PlayerLogic.class
 bloodrunserver\server\ClientManager.class
 bloodrunserver\models\Game.class

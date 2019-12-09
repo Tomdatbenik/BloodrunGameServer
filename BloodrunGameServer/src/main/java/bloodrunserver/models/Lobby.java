@@ -8,25 +8,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Lobby {
-
-    //TODO Create JSON Encoder and Decoder
-
-    Game game;
-
-    public Lobby(List<Player> players) {
-        this.players = players;
-    }
-
-    private static List<Player> players;
+    private List<Player> players;
 
     private boolean IsFinished;
 
     public synchronized List<Player> getPlayers() {
         return players;
-    }
-
-    public synchronized void setPlayers(List<Player> players) {
-        this.players = players;
     }
 
     public boolean isFinished() {
@@ -37,10 +24,15 @@ public class Lobby {
         IsFinished = finished;
     }
 
+    public Lobby(List<Player> players) {
+        this.players = players;
+    }
+
     public String toJson()
     {
-        JSONObject JsonMessage = new JSONObject();
-        JSONObject JSonPlayers = new JSONObject();
+        JSONObject jsonMessage = new JSONObject();
+        JSONObject jSonPlayers = new JSONObject();
+        String playerTemplate = "player_";
 
         for(int i = 1; i <= Integer.parseInt(Application.getProperties().getProperty("Game.Maxplayers")); i++)
         {
@@ -48,22 +40,22 @@ public class Lobby {
             try
             {
                 player = players.get(i-1);
-                JSonPlayers.put("player_" + i,player.getUsername());
+                jSonPlayers.put(playerTemplate + i,player.getUsername());
             }
             catch (Exception ex)
             {
-                JSonPlayers.put("player_" + i, "null");
+                jSonPlayers.put(playerTemplate + i, "null");
             }
         }
 
-        JsonMessage.put("players",JSonPlayers.toJSONString());
+        jsonMessage.put(playerTemplate,jSonPlayers.toJSONString());
 
-        return  JsonMessage.toJSONString();
+        return  jsonMessage.toJSONString();
 
     }
 
-    public static Lobby fromJson(String Jsonstring) {
-        Object jsonmessage = JSONValue.parse(Jsonstring);
+    public static Lobby fromJson(String jsonstring) {
+        Object jsonmessage = JSONValue.parse(jsonstring);
         JSONObject smessage = (JSONObject) jsonmessage;
 
         Object jsongplayers = JSONValue.parse(smessage.get("players").toString());
@@ -79,9 +71,7 @@ public class Lobby {
             }
         }
 
-        Lobby lobby = new Lobby(playerList);
-
-        return lobby;
+        return new Lobby(playerList);
     }
 
 }

@@ -8,7 +8,7 @@ public class Message {
     String sender;
     String content;
     MessageType type;
-    boolean Handled = false;
+    boolean handled = false;
 
     //region Getters and Setters
     public String getSender() {
@@ -20,11 +20,11 @@ public class Message {
     }
 
     public boolean isHandled() {
-        return Handled;
+        return handled;
     }
 
     public void setHandled(boolean handled) {
-        Handled = handled;
+        this.handled = handled;
     }
 
     public String getContent() {
@@ -74,15 +74,14 @@ public class Message {
     }
 
     //Creates message from JsonString
-    public static Message fromJson(String Jsonstring) {
-        Object jsonvalue = JSONValue.parse(Jsonstring);
+    public static Message fromJson(String jsonstring) {
+        Object jsonvalue = JSONValue.parse(jsonstring);
         JSONObject object = (JSONObject) jsonvalue;
 
         String sender = object.get("sender").toString();
         String content = object.get("content").toString();
         MessageType messageType = MessageType.fromInteger(Integer.parseInt(object.get("type").toString()));
 
-        Message message = new Message(sender, content, messageType);
-        return message;
+        return new Message(sender, content, messageType);
     }
 }

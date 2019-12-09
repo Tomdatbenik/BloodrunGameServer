@@ -1,6 +1,6 @@
 package bloodrunserver.icewollowutils.tcp;
 
-import bloodrunserver.communicatie.messageExecutor;
+import bloodrunserver.communicatie.MessageExecutor;
 import bloodrunserver.icewollowutils.models.Message;
 import bloodrunserver.server.Server;
 
@@ -23,24 +23,15 @@ public class TCPListener extends Thread{
     public void run() {
         super.run();
         System.out.println("Started listening on thread: " + this);
-        while (isOpen)
+        while (Boolean.TRUE.equals(isOpen))
         {
             try {
-                Message msg = null;
-                    try
-                        {
-                            msg = readmessage();
-                        }
-                    catch (EOFException ex){
-                        System.out.println(ex.getMessage());
-                        isOpen = false;
-                        socket.close();
-                        System.out.println("Socket closed");
-                    }
-                    if(msg != null)
-                    {
-                        addToBuffer(msg);
-                    }
+                Message msg = readmessage();
+
+                if(msg != null)
+                {
+                    addToBuffer(msg);
+                }
             } catch (IOException e) {
                 System.out.println(e.getMessage());
                 isOpen = false;
@@ -83,6 +74,6 @@ public class TCPListener extends Thread{
 
     public void addToBuffer(Message message)
     {
-        Server.getExecutor().submit(new messageExecutor(message));
+        Server.getExecutor().submit(new MessageExecutor(message));
     }
 }

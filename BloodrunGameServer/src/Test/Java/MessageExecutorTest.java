@@ -1,5 +1,5 @@
 import bloodrunserver.Application;
-import bloodrunserver.communicatie.messageExecutor;
+import bloodrunserver.communicatie.MessageExecutor;
 import bloodrunserver.game.GameCollection;
 import bloodrunserver.icewollowutils.models.Message;
 import bloodrunserver.icewollowutils.models.MessageType;
@@ -38,7 +38,7 @@ public class MessageExecutorTest {
 
         Message message = new Message("WebSocket", lobby.toJson(), MessageType.CREATE_LOBBY);
 
-        Server.getExecutor().submit(new messageExecutor(message));
+        Server.getExecutor().submit(new MessageExecutor(message));
 
         players = new ArrayList<Player>();
 
@@ -51,7 +51,7 @@ public class MessageExecutorTest {
 
         Message message1 = new Message("WebSocket", lobby.toJson(), MessageType.CREATE_LOBBY);
 
-        Server.getExecutor().submit(new messageExecutor(message1));
+        Server.getExecutor().submit(new MessageExecutor(message1));
 
         messages.add(message);
         messages.add(message1);

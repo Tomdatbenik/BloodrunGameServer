@@ -37,11 +37,11 @@ public class    Transform {
     }
 
     public JSONObject toJson() {
-        JSONObject JsonMessage = new JSONObject();
-        JsonMessage.put("location", this.location.toJson());
-        JsonMessage.put("rotation", this.rotation.toJson());
+        JSONObject jsonMessage = new JSONObject();
+        jsonMessage.put("location", this.location.toJson());
+        jsonMessage.put("rotation", this.rotation.toJson());
 
-        return JsonMessage;
+        return jsonMessage;
     }
 
     public static Transform fromJson(String Jsonstring) {
@@ -54,7 +54,6 @@ public class    Transform {
         Location location = Location.fromJson(slocation);
         Rotation rotation = Rotation.fromJson(srotation);
 
-        Transform transform = new Transform(location,rotation);
-        return transform;
+        return new Transform(location,rotation);
     }
 }

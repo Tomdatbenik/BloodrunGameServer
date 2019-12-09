@@ -54,8 +54,8 @@ public class Scale {
         return JsonMessage;
     }
 
-    public static Scale fromJson(String Jsonstring) {
-        Object jsonvalue = JSONValue.parse(Jsonstring);
+    public static Scale fromJson(String jsonstring) {
+        Object jsonvalue = JSONValue.parse(jsonstring);
         JSONObject object = (JSONObject) jsonvalue;
 
         String x = object.get("x").toString();

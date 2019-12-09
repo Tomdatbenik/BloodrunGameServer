@@ -34,8 +34,8 @@ public class Rotation {
         return JsonMessage;
     }
 
-    public static Rotation fromJson(String Jsonstring) {
-        Object jsonvalue = JSONValue.parse(Jsonstring);
+    public static Rotation fromJson(String jsonstring) {
+        Object jsonvalue = JSONValue.parse(jsonstring);
         JSONObject object = (JSONObject) jsonvalue;
 
         String x = object.get("x").toString();
@@ -43,8 +43,7 @@ public class Rotation {
         String z = object.get("z").toString();
         String w = object.get("w").toString();
 
-        Rotation rotation = new Rotation(x, y, z, w);
-        return rotation;
+        return new Rotation(x, y, z, w);
     }
 
 }
