@@ -1,5 +1,6 @@
 package bloodrunserver.models;
 
+import bloodrunserver.Application;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 
@@ -9,6 +10,8 @@ public class Trap {
     private Scale scale;
     boolean activated;
     private TrapType type;
+
+    private int activationRate;
 
     public int getId() {
         return id;
@@ -53,4 +56,66 @@ public class Trap {
         return new Trap(id,transform,scale,activated,type);
     }
 
+    public void activateTrap()
+    {
+        switch (this.type)
+        {
+            case SPIKE_TRAP:
+                int time = Integer.parseInt(Application.getProperties().getProperty("trap.SpikeTrap.ActivateTime"));
+
+                if(activated)
+                {
+                    if(activationRate > time)
+                    {
+                        activationRate = 0;
+                        activated = false;
+                    }
+                }
+                else
+                {
+                    if(activationRate > time)
+                    {
+                        activationRate = 0;
+                        activated = true;
+                    }
+                }
+
+                activationRate++;
+                break;
+            case DARTER:
+                int rate = Integer.parseInt(Application.getProperties().getProperty("trap.Darter.ShootRate"));
+
+                if(activationRate == rate)
+                {
+                    activated = true;
+                }
+
+                if(activated && activationRate > rate)
+                {
+                    activationRate = 0;
+                    activated = false;
+                }
+
+                activationRate++;
+                break;
+            case ROTATE_TRAP:
+                float speed = Float.parseFloat(Application.getProperties().getProperty("trap.RotatTrap.RotateSpeed"));
+
+                Rotation rotation = this.transform.getRotation();
+
+                Float y = Float.parseFloat(rotation.y);
+
+                y += speed;
+
+                if(y >= 360)
+                {
+                    y = (float)0;
+                }
+
+                rotation.y = y.toString();
+
+                this.transform.setRotation(rotation);
+        }
+
+    }
 }

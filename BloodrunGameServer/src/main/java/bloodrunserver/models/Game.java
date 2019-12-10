@@ -46,7 +46,13 @@ public class Game {
         isFinished = finished;
     }
 
-    //TODO Create JSON Encoder and Decoder
+    public synchronized void updateGame()
+    {
+        for (Trap trap : traps)
+        {
+            trap.activateTrap();
+        }
+    }
 
     public synchronized void broadcast() {
         for(Player player : players)

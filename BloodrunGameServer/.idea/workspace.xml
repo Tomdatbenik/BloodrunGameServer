@@ -38,7 +38,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../IceWollowTowns/IceWollowTownsAPI" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -49,7 +49,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="JUnit.Java in BloodrunGameServer">
+  <component name="RunManager" selected="Application.Application">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="bloodrunserver.Application" />
       <module name="BloodrunGameServer" />
@@ -110,9 +110,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Application" />
         <item itemvalue="JUnit.Java in BloodrunGameServer" />
         <item itemvalue="JUnit.MessageExecutorTest [10000]" />
-        <item itemvalue="Application.Application" />
         <item itemvalue="JUnit.GameLogicTests.CreateGameSucces" />
         <item itemvalue="JUnit.GameLogicTests" />
       </list>
@@ -143,7 +143,8 @@
       <workItem from="1575890033782" duration="384000" />
       <workItem from="1575890675864" duration="4109000" />
       <workItem from="1575895621257" duration="167000" />
-      <workItem from="1575895909753" duration="7110000" />
+      <workItem from="1575895909753" duration="7670000" />
+      <workItem from="1575965052469" duration="8241000" />
     </task>
     <servers />
   </component>
@@ -171,54 +172,54 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="704" y="110" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575898542267" />
-    <state width="424" height="466" key="DebuggerActiveHint" timestamp="1575896357951">
+    <state width="424" height="466" key="DebuggerActiveHint" timestamp="1575966805092">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="424" height="466" key="DebuggerActiveHint/0.0.1920.1080@0.0.1920.1080" timestamp="1575896357951" />
-    <state x="635" y="249" key="FileChooserDialogImpl" timestamp="1575890242168">
+    <state width="424" height="466" key="DebuggerActiveHint/0.0.1920.1080@0.0.1920.1080" timestamp="1575966805092" />
+    <state x="635" y="249" key="FileChooserDialogImpl" timestamp="1575967101629">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="635" y="249" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1575890242168" />
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1575902857396">
+    <state x="635" y="249" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1575967101629" />
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1575974048054">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1575902857396" />
-    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1575902857396">
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1575974048054" />
+    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1575974048054">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1575902857396" />
-    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1575902857396">
+    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1575974048054" />
+    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1575974048054">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1575902857396" />
-    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1575902857396">
+    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1575974048054" />
+    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1575974048054">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1575902857396" />
-    <state width="1877" height="363" key="GridCell.Tab.1.bottom" timestamp="1575902376165">
+    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1575974048054" />
+    <state width="1877" height="363" key="GridCell.Tab.1.bottom" timestamp="1575970565624">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1575902376165" />
-    <state width="1877" height="363" key="GridCell.Tab.1.center" timestamp="1575902376165">
+    <state width="1877" height="363" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1575970565624" />
+    <state width="1877" height="363" key="GridCell.Tab.1.center" timestamp="1575970565624">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1575902376165" />
-    <state width="1877" height="363" key="GridCell.Tab.1.left" timestamp="1575902376165">
+    <state width="1877" height="363" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1575970565624" />
+    <state width="1877" height="363" key="GridCell.Tab.1.left" timestamp="1575970565623">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1575902376165" />
-    <state width="1877" height="363" key="GridCell.Tab.1.right" timestamp="1575902376165">
+    <state width="1877" height="363" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1575970565623" />
+    <state width="1877" height="363" key="GridCell.Tab.1.right" timestamp="1575970565624">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1575902376165" />
-    <state x="656" y="363" key="com.intellij.ide.util.TipDialog" timestamp="1575895909746">
+    <state width="1877" height="363" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1575970565624" />
+    <state x="656" y="363" key="com.intellij.ide.util.TipDialog" timestamp="1575965071758">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575895909746" />
-    <state x="616" y="250" key="run.anything.popup" timestamp="1575896062750">
+    <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575965071758" />
+    <state x="616" y="250" key="run.anything.popup" timestamp="1575970498534">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="616" y="250" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1575896062750" />
+    <state x="616" y="250" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1575970498534" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/BloodrunGameServer$Application.ic" NAME="Application Coverage Results" MODIFIED="1575902023590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

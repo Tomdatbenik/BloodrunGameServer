@@ -26,16 +26,20 @@ public class ClientManager implements Runnable{
         {
             for(Game game : GameCollection.getGames())
             {
-                for(Player player : game.getPlayers())
+
+                Player player = game.getPlayers()
+                        .stream()
+                        .filter(player1 -> player1.getUsername().equals(client.getUsername()))
+                        .findAny()
+                        .orElse(null);
+
+                if(player != null)
                 {
-                    if(player.getUsername().equals(client.getUsername()))
-                    {
-                        player.setClient(client);
-                        player.setConnected(true);
-                        //System.out.println("Matched player: " + player.getUsername());
-                        //Add client to matched client list to remove it from the client collection
-                        matchedClients.add(client);
-                    }
+                    player.setClient(client);
+                    player.setConnected(true);
+                    //System.out.println("Matched player: " + player.getUsername());
+                    //Add client to matched client list to remove it from the client collection
+                    matchedClients.add(client);
                 }
             }
         }
@@ -51,14 +55,17 @@ public class ClientManager implements Runnable{
     {
         for(Game game : GameCollection.getGames())
         {
-            for(Player player : game.getPlayers())
+            Player player = game.getPlayers()
+                    .stream()
+                    .filter(player1 -> player1.getUsername().equals(username))
+                    .findAny()
+                    .orElse(null);
+
+            if(player != null)
             {
-                if(player.getUsername().equals(username))
-                {
-                    player.setClient(null);
-                    player.setConnected(false);
-                    //System.out.println("UnMatched player: " + player.getUsername());
-                }
+                player.setClient(null);
+                player.setConnected(false);
+                System.out.println("UnMatched player: " + player.getUsername());
             }
         }
     }

@@ -17,6 +17,7 @@ public class GameManager implements Runnable{
             if(!game.isFinished())
             {
                 //Send the game itself to all the players that belong to the game.
+                game.updateGame();
                 game.broadcast();
             }
             else
