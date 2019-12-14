@@ -39,6 +39,9 @@ public class Client {
         //Server will start a listener so the server can listen to the client.
         this.tcpListener = tcpListener;
         this.username = username;
+
+        this.tcpListener.setUsername(this.username);
+
         this.port = port;
         try {
             this.address = InetAddress.getByName(ip);

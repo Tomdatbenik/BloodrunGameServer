@@ -54,7 +54,7 @@ public class Game {
         }
     }
 
-    public synchronized void broadcast() {
+    public synchronized void udpBroadcast() {
         for(Player player : players)
         {
             Message message = new Message("Server", this.toJson().toJSONString(), MessageType.GAME);
@@ -65,6 +65,16 @@ public class Game {
                 }
             } catch (IOException e) {
                 SoutLogger.log(e.getMessage());
+            }
+        }
+    }
+
+    public synchronized void tcpBroadCast()
+    {
+        for(Player player : players) {
+            Message message = new Message("Server", this.toJson().toJSONString(), MessageType.GAME);
+            if (player.getClient() != null) {
+                player.getClient().sendTCPMessage(message);
             }
         }
     }

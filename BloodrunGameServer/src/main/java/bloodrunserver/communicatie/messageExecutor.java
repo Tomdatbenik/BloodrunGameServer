@@ -1,6 +1,7 @@
 package bloodrunserver.communicatie;
 
 import bloodrunserver.icewollowutils.models.Message;
+import bloodrunserver.logic.Chat.ChatLogic;
 import bloodrunserver.logic.lobby.LobbyLogic;
 import bloodrunserver.logic.player.PlayerLogic;
 import bloodrunserver.models.Lobby;
@@ -11,7 +12,8 @@ public class MessageExecutor implements Runnable{
 
     private final Message message = new Message();
     private static final LobbyLogic lobbyLogic = new LobbyLogic();
-    private static final PlayerLogic PlayerLogic = new PlayerLogic();
+    private static final PlayerLogic playerLogic = new PlayerLogic();
+    private static final ChatLogic chatLogic = new ChatLogic();
 
     public MessageExecutor(Message newMessage)
     {
@@ -34,6 +36,9 @@ public class MessageExecutor implements Runnable{
             case MOVE:
                 movePlayer();
                 break;
+            case CHAT:
+                chatLogic.SendChatMessageToPlayers(this.message);
+                        break;
             default:
                 break;
         }
@@ -54,10 +59,10 @@ public class MessageExecutor implements Runnable{
 
     private void movePlayer()
     {
-        synchronized(PlayerLogic)
+        synchronized(playerLogic)
         {
             Player player = Player.fromJson(message.getContent());
-            PlayerLogic.movePlayer(player);
+            playerLogic.movePlayer(player);
         }
     }
 }

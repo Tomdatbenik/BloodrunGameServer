@@ -3,6 +3,7 @@ package bloodrunserver.icewollowutils.tcp;
 import bloodrunserver.SoutLogger;
 import bloodrunserver.communicatie.MessageExecutor;
 import bloodrunserver.icewollowutils.models.Message;
+import bloodrunserver.icewollowutils.models.MessageType;
 import bloodrunserver.server.Server;
 
 import java.io.*;
@@ -13,6 +14,11 @@ public class TCPListener extends Thread{
 
     private Socket socket;
     private Boolean isOpen = true;
+    private String username;
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
     //TCP listener needs a socket to send and receive!
     public TCPListener(Socket socket)
@@ -38,6 +44,9 @@ public class TCPListener extends Thread{
                 isOpen = false;
                 try {
                     socket.close();
+
+                    Server.getExecutor().submit(new MessageExecutor(new Message(this.username, "", MessageType.DISCONNECT)));
+
                     SoutLogger.log("Socket closed");
                 } catch (IOException ex) {
                     SoutLogger.log("Socket can't be closed");
@@ -45,6 +54,7 @@ public class TCPListener extends Thread{
                 }
             }
         }
+        SoutLogger.log("Stopped listening");
     }
 
     public Message readmessage() throws IOException {

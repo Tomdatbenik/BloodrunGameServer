@@ -1,6 +1,7 @@
 package bloodrunserver.icewollowutils.udp;
 
 import bloodrunserver.SoutLogger;
+import bloodrunserver.icewollowutils.Compressor;
 import bloodrunserver.server.Server;
 
 import java.io.IOException;

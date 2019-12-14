@@ -11,7 +11,8 @@ public enum MessageType {
     MOVE(Integer.parseInt(Application.getProperties().getProperty("message.Type.Move"))),
     UDP_REQUEST(Integer.parseInt(Application.getProperties().getProperty("message.Type.UDPRequest"))),
     GAME(Integer.parseInt(Application.getProperties().getProperty("message.Type.Game"))),
-    CREATE_LOBBY(Integer.parseInt(Application.getProperties().getProperty("message.Type.CreateLobby")));
+    CREATE_LOBBY(Integer.parseInt(Application.getProperties().getProperty("message.Type.CreateLobby"))),
+    CHAT(Integer.parseInt(Application.getProperties().getProperty("message.Type.Chat")));
 
     private final int value;
     MessageType(int value) { this.value = value; }
@@ -49,6 +50,10 @@ public enum MessageType {
         else if(x == Integer.parseInt(Application.getProperties().getProperty("message.Type.CreateLobby")))
         {
             return CREATE_LOBBY;
+        }
+        else if(x == Integer.parseInt(Application.getProperties().getProperty("message.Type.Chat")))
+        {
+            return CHAT;
         }
 
         return null;

@@ -1,5 +1,6 @@
 package bloodrunserver.logic.player;
 
+import bloodrunserver.SoutLogger;
 import bloodrunserver.game.GameCollection;
 import bloodrunserver.models.*;
 

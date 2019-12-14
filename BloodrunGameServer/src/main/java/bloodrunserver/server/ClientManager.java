@@ -19,7 +19,6 @@ public class ClientManager implements Runnable{
         matchClients();
     }
 
-    //TODO Clean up code
     public void matchClients()
     {
         for(Client client : ClientCollection.getClients())
@@ -37,7 +36,8 @@ public class ClientManager implements Runnable{
                 {
                     player.setClient(client);
                     player.setConnected(true);
-                    //System.out.println("Matched player: " + player.getUsername());
+                    SoutLogger.log("Matched player: " + player.getUsername());
+
                     //Add client to matched client list to remove it from the client collection
                     matchedClients.add(client);
                 }
