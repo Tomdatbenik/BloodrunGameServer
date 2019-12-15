@@ -27,7 +27,7 @@ public class TCPWriter implements Runnable{
             dataOutputStream.write(msg);
             dataOutputStream.flush();
 
-            SoutLogger.log("Sending TCP message: " + message.toString());
+//            SoutLogger.log("Sending TCP message: " + message.toString());
         } catch (IOException e) {
             SoutLogger.log(e.getMessage());
         }

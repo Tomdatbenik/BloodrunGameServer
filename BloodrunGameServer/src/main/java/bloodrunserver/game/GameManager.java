@@ -18,7 +18,7 @@ public class GameManager implements Runnable{
             {
                 //Send the game itself to all the players that belong to the game.
                 game.updateGame();
-                game.udpBroadcast();
+                game.tcpBroadCast();
             }
             else
             {
