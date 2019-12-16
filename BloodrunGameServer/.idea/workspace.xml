@@ -154,6 +154,7 @@
       <workItem from="1576169997164" duration="10000" />
       <workItem from="1576323029472" duration="5754000" />
       <workItem from="1576437561430" duration="2822000" />
+      <workItem from="1576481988569" duration="12786000" />
     </task>
     <servers />
   </component>
@@ -169,10 +170,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="414" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575902418905" />
-    <state x="765" y="240" key="#com.intellij.ide.util.MemberChooser" timestamp="1576058723090">
+    <state x="1109" y="208" key="#com.intellij.ide.util.MemberChooser" timestamp="1576505538138">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="765" y="240" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1576058723090" />
+    <state x="1109" y="208" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1576505538138" />
     <state x="808" y="428" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1575890208852">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -189,56 +190,87 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="635" y="249" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1576163485822" />
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1576440141742">
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1576507646533">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1576440141742" />
-    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1576440141741">
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1576507646533" />
+    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1576507646532">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1576440141741" />
-    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1576440141741">
+    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1576507646532" />
+    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1576507646531">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1576440141741" />
-    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1576440141741">
+    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1576507646531" />
+    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1576507646533">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1576440141741" />
-    <state width="1877" height="363" key="GridCell.Tab.1.bottom" timestamp="1576081813919">
+    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1576507646533" />
+    <state width="1877" height="363" key="GridCell.Tab.1.bottom" timestamp="1576502488331">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1576081813919" />
-    <state width="1877" height="363" key="GridCell.Tab.1.center" timestamp="1576081813919">
+    <state width="1877" height="363" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1576502488331" />
+    <state width="1877" height="363" key="GridCell.Tab.1.center" timestamp="1576502488331">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1576081813919" />
-    <state width="1877" height="363" key="GridCell.Tab.1.left" timestamp="1576081813919">
+    <state width="1877" height="363" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1576502488331" />
+    <state width="1877" height="363" key="GridCell.Tab.1.left" timestamp="1576502488331">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1576081813919" />
-    <state width="1877" height="363" key="GridCell.Tab.1.right" timestamp="1576081813919">
+    <state width="1877" height="363" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1576502488331" />
+    <state width="1877" height="363" key="GridCell.Tab.1.right" timestamp="1576502488331">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1576081813919" />
+    <state width="1877" height="363" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1576502488331" />
     <state x="461" y="182" key="SettingsEditor" timestamp="1576170005822">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="182" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1576170005822" />
-    <state x="656" y="363" key="com.intellij.ide.util.TipDialog" timestamp="1576437562612">
+    <state x="656" y="363" key="com.intellij.ide.util.TipDialog" timestamp="1576481988859">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1576437562612" />
+    <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1576481988859" />
     <state x="616" y="250" key="run.anything.popup" timestamp="1575970498534">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="616" y="250" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1575970498534" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/bloodrunserver/server/ClientManager.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/bloodrunserver/server/ClientManager.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/bloodrunserver/server/ClientManager.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/bloodrunserver/server/ClientManager.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/bloodrunserver/models/Dungeon.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/BloodrunGameServer$Application.ic" NAME="Application Coverage Results" MODIFIED="1575902023590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/BloodrunGameServer$Application.ic" NAME="Application Coverage Results" MODIFIED="1576446320396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>bloodrunserver.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/BloodrunGameServer$Java_in_BloodrunGameServer.ic" NAME="Java in BloodrunGameServer Coverage Results" MODIFIED="1575902857372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/BloodrunGameServer$Java_in_BloodrunGameServer.ic" NAME="Java in BloodrunGameServer Coverage Results" MODIFIED="1576446336689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/BloodrunGameServer$Test_in_BloodrunGameServer.ic" NAME="Test in BloodrunGameServer Coverage Results" MODIFIED="1575898871092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

@@ -10,6 +10,7 @@ public class Player {
     private Client client;
     private final Transform transform = new Transform();
     private boolean connected = false;
+    private boolean pushing = false;
 
     public Player(String username) {
         this.username = username;
@@ -17,6 +18,13 @@ public class Player {
 
     public Player(String username, Transform transform) {
         this.username = username;
+        this.transform.setLocation(transform.getLocation());
+        this.transform.setRotation(transform.getRotation());
+    }
+
+    public Player(String username,Transform transform, boolean pushing) {
+        this.username = username;
+        this.pushing = pushing;
         this.transform.setLocation(transform.getLocation());
         this.transform.setRotation(transform.getRotation());
     }
@@ -34,6 +42,14 @@ public class Player {
             this.transform.setLocation(transform.getLocation());
             this.transform.setRotation(transform.getRotation());
         }
+    }
+
+    public boolean isPushing() {
+        return pushing;
+    }
+
+    public void setPushing(boolean pushing) {
+        this.pushing = pushing;
     }
 
     public void setConnected(boolean connected) {
@@ -61,6 +77,7 @@ public class Player {
         jsonMessage.put("username", this.username);
         jsonMessage.put("transform", this.transform.toJson());
         jsonMessage.put("connected", this.connected);
+        jsonMessage.put("pushing", this.pushing);
 
         return jsonMessage;
     }
@@ -71,9 +88,10 @@ public class Player {
 
         String susername = object.get("username").toString();
         String stransform = object.get("transform").toString();
+        Boolean pushing = Boolean.parseBoolean(object.get("pushing").toString());
 
         Transform transform = Transform.fromJson(stransform);
 
-        return new Player(susername,transform);
+        return new Player(susername,transform, pushing);
     }
 }

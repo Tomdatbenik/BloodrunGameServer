@@ -8,7 +8,7 @@ import java.util.List;
 public class GameManager implements Runnable{
 
     public synchronized void run() {
-        System.out.println("managing games on thread: " + Thread.currentThread());
+//        System.out.println("managing games on thread: " + Thread.currentThread());
         //Get all games from the game collection and broadcasting them.
         List<Game> removedgames = new ArrayList<Game>();
 
@@ -18,14 +18,13 @@ public class GameManager implements Runnable{
             {
                 //Send the game itself to all the players that belong to the game.
                 game.updateGame();
-                game.tcpBroadCast();
+                game.udpBroadcast();
             }
             else
             {
                 game.setFinished(true);
                 game.tcpBroadCast();
                 removedgames.add(game);
-                //TODO maybe make a tcp broadcast also remove the game from the gamemanger and remove this from gamelist
             }
         }
 

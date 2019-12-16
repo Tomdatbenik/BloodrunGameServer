@@ -38,7 +38,11 @@ public class MessageExecutor implements Runnable{
                 break;
             case CHAT:
                 chatLogic.SendChatMessageToPlayers(this.message);
-                        break;
+               break;
+            case PUSHING:
+                Player player = Player.fromJson(message.getContent());
+                playerLogic.playerPush(player);
+                break;
             default:
                 break;
         }

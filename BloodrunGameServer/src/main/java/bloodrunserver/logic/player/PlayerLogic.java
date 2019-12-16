@@ -19,4 +19,18 @@ public class PlayerLogic {
             }
         }
     }
+
+    public void playerPush(Player player)
+    {
+        for(Game game : GameCollection.getGames())
+        {
+            for(Player p : game.getPlayers())
+            {
+                if(player.getUsername().equals(p.getUsername()))
+                {
+                    p.setPushing(player.isPushing());
+                }
+            }
+        }
+    }
 }
