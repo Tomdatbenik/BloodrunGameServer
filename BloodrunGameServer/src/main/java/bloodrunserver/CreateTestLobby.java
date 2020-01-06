@@ -13,15 +13,15 @@ import java.util.List;
 public class CreateTestLobby {
     //TODO Create test lobby
 
-    public void testLobyy()
-    {
+    public void testLobyy() {
         List<Player> players = new ArrayList<Player>();
 
         players.add(new Player("Tomdatbenik"));
 //        players.add(new Player("SKULLCRUSHER"));
 //        players.add(new Player("Mario"));
-//        players .add(new Player("MrrrLuiigii"));
-//        players .add(new Player("Joostdatbenik"));
+        players.add(new Player("MrrrLuiigii"));
+//        players.add(new Player("joost"));
+//        players.add(new Player("Aap"));
 
         Lobby lobby = new Lobby(players);
 

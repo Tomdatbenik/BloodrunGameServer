@@ -66,6 +66,7 @@ public class MessageExecutor implements Runnable{
         synchronized(playerLogic)
         {
             Player player = Player.fromJson(message.getContent());
+            System.out.println(player.getTransform().getLocation().toJson());
             playerLogic.movePlayer(player);
         }
     }

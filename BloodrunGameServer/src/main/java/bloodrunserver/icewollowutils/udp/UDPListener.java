@@ -41,7 +41,7 @@ public class UDPListener extends Thread{
         //System.out.println("Received message is:" + data);
 
         Message message = Message.fromJson(data);
-
+        System.out.println(message.getContent());
         Server.getExecutor().submit(new MessageExecutor(message));
     }
 }
