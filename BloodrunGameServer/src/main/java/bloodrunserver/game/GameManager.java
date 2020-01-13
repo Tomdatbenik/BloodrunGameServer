@@ -24,6 +24,7 @@ public class GameManager implements Runnable{
             {
                 game.setFinished(true);
                 game.tcpBroadCast();
+                //TODO send message to lobby microservice who has won.
                 removedgames.add(game);
             }
         }

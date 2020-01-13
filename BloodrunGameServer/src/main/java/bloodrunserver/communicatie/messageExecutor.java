@@ -2,6 +2,7 @@ package bloodrunserver.communicatie;
 
 import bloodrunserver.icewollowutils.models.Message;
 import bloodrunserver.logic.Chat.ChatLogic;
+import bloodrunserver.logic.game.GameLogic;
 import bloodrunserver.logic.lobby.LobbyLogic;
 import bloodrunserver.logic.player.PlayerLogic;
 import bloodrunserver.models.Lobby;
@@ -14,6 +15,7 @@ public class MessageExecutor implements Runnable{
     private static final LobbyLogic lobbyLogic = new LobbyLogic();
     private static final PlayerLogic playerLogic = new PlayerLogic();
     private static final ChatLogic chatLogic = new ChatLogic();
+    private static final GameLogic gameLogic = new GameLogic();
 
     public MessageExecutor(Message newMessage)
     {
@@ -26,6 +28,9 @@ public class MessageExecutor implements Runnable{
     }
 
     public synchronized void run() {
+
+        Player player = null;
+
         switch (message.getType()) {
             case CREATE_LOBBY:
                 createLobby();
@@ -40,9 +45,12 @@ public class MessageExecutor implements Runnable{
                 chatLogic.SendChatMessageToPlayers(this.message);
                break;
             case PUSHING:
-                Player player = Player.fromJson(message.getContent());
+                player = Player.fromJson(message.getContent());
                 playerLogic.playerPush(player);
                 break;
+            case FINISH:
+                player = Player.fromJson(message.getContent());
+                gameLogic.setWinner(player);
             default:
                 break;
         }
@@ -66,7 +74,6 @@ public class MessageExecutor implements Runnable{
         synchronized(playerLogic)
         {
             Player player = Player.fromJson(message.getContent());
-            System.out.println(player.getTransform().getLocation().toJson());
             playerLogic.movePlayer(player);
         }
     }

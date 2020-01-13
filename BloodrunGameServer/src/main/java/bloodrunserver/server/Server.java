@@ -51,7 +51,7 @@ public class Server{
         scheduledMessageExecutor = Executors.newScheduledThreadPool(Integer.parseInt(Application.getProperties().getProperty("Threads.max")));
 
         //Schedule broadcast every 16 milliseconds with no delay.
-        scheduledMessageExecutor.scheduleAtFixedRate(new GameManager(),0,32, TimeUnit.MILLISECONDS);
+        scheduledMessageExecutor.scheduleAtFixedRate(new GameManager(),0,16, TimeUnit.MILLISECONDS);
 
         try {
             //Try connecting UDP socket to port defined in the properties

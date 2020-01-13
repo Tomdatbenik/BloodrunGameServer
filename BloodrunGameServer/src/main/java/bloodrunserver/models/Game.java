@@ -22,6 +22,9 @@ public class Game {
     private boolean isFinished = false;
     private Player winner = null;
 
+    public void setWinner(Player winner) {
+        this.winner = winner;
+    }
 
     public Game(List<Player> players) {
         this.players = players;
@@ -115,6 +118,8 @@ public class Game {
         jsonObject.put("traps", jatraps);
 
         jsonObject.put("players",jsonplayers);
+
+        jsonObject.put("finish", dungeon.finish.toJson());
 
         return jsonObject;
     }

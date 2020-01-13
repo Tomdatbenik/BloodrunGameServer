@@ -19,9 +19,9 @@ public class CreateTestLobby {
         players.add(new Player("Tomdatbenik"));
 //        players.add(new Player("SKULLCRUSHER"));
 //        players.add(new Player("Mario"));
-        players.add(new Player("MrrrLuiigii"));
-//        players.add(new Player("joost"));
-//        players.add(new Player("Aap"));
+//        players.add(new Player("MrrrLuiigii"));
+////        players.add(new Player("joostdatbenik"));
+//        players.add(new Player("Sidwell"));
 
         Lobby lobby = new Lobby(players);
 

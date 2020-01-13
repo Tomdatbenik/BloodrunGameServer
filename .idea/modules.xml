@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/BloodrunGameServer.iml" filepath="$PROJECT_DIR$/.idea/BloodrunGameServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BloodrunGameServer/BloodrunServer.iml" filepath="$PROJECT_DIR$/BloodrunGameServer/BloodrunServer.iml" />
     </modules>
   </component>
 </project>

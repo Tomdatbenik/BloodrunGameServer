@@ -19,6 +19,8 @@ public class Dungeon {
     public final List<Spawnpoint> spawnpoints = new ArrayList<Spawnpoint>();
     public final List<Trap> trapList = new ArrayList<Trap>();
 
+    public final Finish finish = new Finish();
+
     public Dungeon() {
         getDungeonFromResourcesJson();
     }
@@ -48,6 +50,13 @@ public class Dungeon {
                 Location location = Location.fromJson(((JSONObject)object).get("location").toString());
                 spawnpoints.add(new Spawnpoint(location));
             }
+
+            Object ofinish = JSONValue.parse(jsonObject.get("finish").toString());
+
+            Transform transform = Transform.fromJson(((JSONObject)ofinish).get("transform").toString());
+            Scale scale = Scale.fromJson(((JSONObject)ofinish).get("scale").toString());
+            finish.setTransform(transform);
+            finish.setScale((scale));
 
         } catch (IOException e) {
             SoutLogger.log(e.getMessage());

@@ -4,11 +4,8 @@ import bloodrunserver.logic.game.GameLogic;
 import bloodrunserver.models.Lobby;
 import bloodrunserver.models.Player;
 import org.junit.Assert;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
-import java.io.IOException;
-import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
