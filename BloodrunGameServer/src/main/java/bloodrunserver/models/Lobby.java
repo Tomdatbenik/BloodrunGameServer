@@ -10,18 +10,8 @@ import java.util.List;
 public class Lobby {
     private List<Player> players;
 
-    private boolean isFinished;
-
     public synchronized List<Player> getPlayers() {
         return players;
-    }
-
-    public boolean isFinished() {
-        return isFinished;
-    }
-
-    public void setFinished(boolean finished) {
-        isFinished = finished;
     }
 
     public Lobby(List<Player> players) {
