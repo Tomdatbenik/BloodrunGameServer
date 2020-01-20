@@ -1,11 +1,14 @@
 package bloodrunserver;
 
 import bloodrunserver.server.Server;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+@SpringBootApplication
 public class Application {
 
     private static final Properties properties = new Properties();
@@ -27,6 +30,7 @@ public class Application {
         //TODO Create websocket instead of this fart
         CreateTestLobby createTestLobby = new CreateTestLobby();
         createTestLobby.testLobyy();
+        SpringApplication.run(Application.class, args);
     }
 
     //Create instance of server.
