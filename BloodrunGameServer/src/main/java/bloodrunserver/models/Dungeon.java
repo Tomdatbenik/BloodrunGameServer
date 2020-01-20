@@ -18,6 +18,7 @@ public class Dungeon {
 
     public final List<Spawnpoint> spawnpoints = new ArrayList<Spawnpoint>();
     public final List<Trap> trapList = new ArrayList<Trap>();
+    public final List<Checkpoint> checkpoints = new ArrayList<>();
 
     public final Finish finish = new Finish();
 
@@ -49,6 +50,19 @@ public class Dungeon {
             {
                 Location location = Location.fromJson(((JSONObject)object).get("location").toString());
                 spawnpoints.add(new Spawnpoint(location));
+            }
+
+            Object oCheckpoints = JSONValue.parse(jsonObject.get("checkpoints").toString());
+            for(Object object : (JSONArray) oCheckpoints)
+            {
+                Transform transform = Transform.fromJson(((JSONObject)object).get("transform").toString());
+                Scale scale = Scale.fromJson(((JSONObject)object).get("scale").toString());
+                Checkpoint checkpoint = new Checkpoint();
+
+                checkpoint.setTransform(transform);
+                checkpoint.setScale(scale);
+
+                checkpoints.add(checkpoint);
             }
 
             Object ofinish = JSONValue.parse(jsonObject.get("finish").toString());

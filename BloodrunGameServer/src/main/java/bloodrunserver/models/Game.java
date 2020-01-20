@@ -115,6 +115,16 @@ public class Game {
             jatraps.add(trap.toJson());
         }
 
+        //checkpoints
+        JSONArray jaCheckpoints = new JSONArray();
+
+        for (Checkpoint checkpoint :  dungeon.checkpoints)
+        {
+            jaCheckpoints.add(checkpoint.toJson());
+        }
+
+        jsonObject.put("checkpoints",jaCheckpoints);
+
         jsonObject.put("traps", jatraps);
 
         jsonObject.put("players",jsonplayers);

@@ -17,7 +17,7 @@ public class CreateTestLobby {
         List<Player> players = new ArrayList<Player>();
 
         players.add(new Player("Tomdatbenik"));
-//        players.add(new Player("SKULLCRUSHER"));
+        players.add(new Player("SKULLCRUSHER"));
 //        players.add(new Player("Mario"));
 //        players.add(new Player("MrrrLuiigii"));
 ////        players.add(new Player("joostdatbenik"));

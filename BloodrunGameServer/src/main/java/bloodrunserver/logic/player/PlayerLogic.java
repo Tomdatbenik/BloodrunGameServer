@@ -15,6 +15,8 @@ public class PlayerLogic {
                 if(player.getUsername().equals(p.getUsername()))
                 {
                     p.setTransform(player.getTransform());
+                    p.setRunning(player.isRunning());
+                    p.setVertical(player.getVertical());
                 }
             }
         }

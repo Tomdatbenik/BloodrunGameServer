@@ -183,7 +183,7 @@
       <workItem from="1579178887593" duration="645000" />
       <workItem from="1579272320740" duration="283000" />
       <workItem from="1579285013617" duration="83000" />
-      <workItem from="1579510788356" duration="2674000" />
+      <workItem from="1579510788356" duration="14873000" />
     </task>
     <servers />
   </component>
@@ -199,62 +199,66 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="414" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575902418905" />
-    <state x="1109" y="208" key="#com.intellij.ide.util.MemberChooser" timestamp="1578917084745">
+    <state x="1109" y="208" key="#com.intellij.ide.util.MemberChooser" timestamp="1579522914720">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1109" y="208" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1578917084745" />
+    <state x="1109" y="208" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1579522914720" />
     <state x="808" y="428" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1575890208852">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="808" y="428" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575890208852" />
+    <state x="676" y="258" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog" timestamp="1579524214820">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="676" y="258" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1579524214820" />
     <state x="704" y="110" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1575898542267">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="704" y="110" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575898542267" />
-    <state width="441" height="466" key="DebuggerActiveHint" timestamp="1578318659425">
+    <state width="441" height="466" key="DebuggerActiveHint" timestamp="1579524109563">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="441" height="466" key="DebuggerActiveHint/0.0.1920.1080@0.0.1920.1080" timestamp="1578318659425" />
+    <state width="441" height="466" key="DebuggerActiveHint/0.0.1920.1080@0.0.1920.1080" timestamp="1579524109563" />
     <state x="635" y="249" key="FileChooserDialogImpl" timestamp="1579514407402">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="635" y="249" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1579514407402" />
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1579514543832">
+    <state width="1877" height="363" key="GridCell.Tab.0.bottom" timestamp="1579528546403">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1579514543832" />
-    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1579514543832">
+    <state width="1877" height="363" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1579528546403" />
+    <state width="1877" height="363" key="GridCell.Tab.0.center" timestamp="1579528546402">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1579514543832" />
-    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1579514543832">
+    <state width="1877" height="363" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1579528546402" />
+    <state width="1877" height="363" key="GridCell.Tab.0.left" timestamp="1579528546402">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1579514543832" />
-    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1579514543832">
+    <state width="1877" height="363" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1579528546402" />
+    <state width="1877" height="363" key="GridCell.Tab.0.right" timestamp="1579528546402">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1579514543832" />
-    <state width="1877" height="363" key="GridCell.Tab.1.bottom" timestamp="1578920724101">
+    <state width="1877" height="363" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1579528546402" />
+    <state width="1877" height="363" key="GridCell.Tab.1.bottom" timestamp="1579528546404">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1578920724101" />
-    <state width="1877" height="363" key="GridCell.Tab.1.center" timestamp="1578920724101">
+    <state width="1877" height="363" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1579528546404" />
+    <state width="1877" height="363" key="GridCell.Tab.1.center" timestamp="1579528546404">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1578920724101" />
-    <state width="1877" height="363" key="GridCell.Tab.1.left" timestamp="1578920724101">
+    <state width="1877" height="363" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1579528546404" />
+    <state width="1877" height="363" key="GridCell.Tab.1.left" timestamp="1579528546403">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1578920724101" />
-    <state width="1877" height="363" key="GridCell.Tab.1.right" timestamp="1578920724101">
+    <state width="1877" height="363" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1579528546403" />
+    <state width="1877" height="363" key="GridCell.Tab.1.right" timestamp="1579528546404">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1578920724101" />
-    <state x="490" y="194" key="Maven.ArtifactSearchDialog" timestamp="1578301078831">
+    <state width="1877" height="363" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1579528546404" />
+    <state x="490" y="194" key="Maven.ArtifactSearchDialog" timestamp="1579516462254">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="490" y="194" key="Maven.ArtifactSearchDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1578301078831" />
+    <state x="490" y="194" key="Maven.ArtifactSearchDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1579516462254" />
     <state x="461" y="182" key="SettingsEditor" timestamp="1576170005822">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -272,20 +276,14 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="616" y="250" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1575970498534" />
+    <state x="616" y="192" width="672" height="676" key="search.everywhere.popup" timestamp="1579516388391">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="616" y="192" width="672" height="676" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1579516388391" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/bloodrunserver/models/Dungeon.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/bloodrunserver/communicatie/MessageExecutor.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/bloodrunserver/communicatie/MessageExecutor.java</url>
           <line>50</line>

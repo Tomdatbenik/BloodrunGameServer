@@ -12,6 +12,9 @@ public class Player {
     private boolean connected = false;
     private boolean pushing = false;
 
+    private boolean running;
+    private float vertical;
+
     public Player(String username) {
         this.username = username;
     }
@@ -27,6 +30,16 @@ public class Player {
         this.pushing = pushing;
         this.transform.setLocation(transform.getLocation());
         this.transform.setRotation(transform.getRotation());
+    }
+
+    public Player(String susername, Transform transform, Boolean pushing, Boolean running, float vertical) {
+        this.username = susername;
+        this.pushing = pushing;
+        this.transform.setLocation(transform.getLocation());
+        this.transform.setRotation(transform.getRotation());
+        this.pushing = pushing;
+        this.running = running;
+        this.vertical = vertical;
     }
 
     public Transform getTransform() {
@@ -50,6 +63,22 @@ public class Player {
 
     public void setPushing(boolean pushing) {
         this.pushing = pushing;
+    }
+
+    public boolean isRunning() {
+        return running;
+    }
+
+    public void setRunning(boolean running) {
+        this.running = running;
+    }
+
+    public float getVertical() {
+        return vertical;
+    }
+
+    public void setVertical(float vertical) {
+        this.vertical = vertical;
     }
 
     public void setConnected(boolean connected) {
@@ -78,6 +107,8 @@ public class Player {
         jsonMessage.put("transform", this.transform.toJson());
         jsonMessage.put("connected", this.connected);
         jsonMessage.put("pushing", this.pushing);
+        jsonMessage.put("running", this.running);
+        jsonMessage.put("vertical", this.vertical);
 
         return jsonMessage;
     }
@@ -89,9 +120,11 @@ public class Player {
         String susername = object.get("username").toString();
         String stransform = object.get("transform").toString();
         Boolean pushing = Boolean.parseBoolean(object.get("pushing").toString());
+        Boolean running = Boolean.parseBoolean(object.get("running").toString());
+        float vertical = Float.parseFloat(object.get("vertical").toString());
 
         Transform transform = Transform.fromJson(stransform);
 
-        return new Player(susername,transform, pushing);
+        return new Player(susername,transform, pushing, running, vertical);
     }
 }
