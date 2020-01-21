@@ -26,6 +26,10 @@ public class Game {
         this.winner = winner;
     }
 
+    public Player getWinner() {
+        return winner;
+    }
+
     public Game(List<Player> players) {
         this.players = players;
         dungeon = new Dungeon();
@@ -60,7 +64,8 @@ public class Game {
     public synchronized void udpBroadcast() {
         for(Player player : players)
         {
-            Message message = new Message("Server", this.toJson().toJSONString(), MessageType.GAME);
+
+            Message message = new Message("Server", toJson().toJSONString(), MessageType.GAME);
             try {
                 if(player.getClient() != null)
                 {
@@ -88,7 +93,7 @@ public class Game {
         //Players
         JSONObject jsonplayers = new JSONObject();
 
-        for(int i = 1; i <= Integer.parseInt(Application.getProperties().getProperty("Game.Maxplayers")); i++)
+        for(int i = 1; i <= players.size(); i++)
         {
             Player player = players.get(i-1);
 

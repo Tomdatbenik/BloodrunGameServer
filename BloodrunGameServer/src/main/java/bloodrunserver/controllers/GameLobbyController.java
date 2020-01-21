@@ -3,6 +3,7 @@ package bloodrunserver.controllers;
 import bloodrunserver.communicatie.MessageExecutor;
 import bloodrunserver.icewollowutils.models.Message;
 import bloodrunserver.icewollowutils.models.MessageType;
+import bloodrunserver.logic.game.GameLogic;
 import bloodrunserver.models.Lobby;
 import bloodrunserver.models.Player;
 import bloodrunserver.models.dto.GameInfoDto;
@@ -18,6 +19,8 @@ import java.util.List;
 @RestController
 @RequestMapping(path = "api", produces = MediaType.APPLICATION_JSON_VALUE)
 public class GameLobbyController {
+
+    GameLogic gameLogic = new GameLogic();
 
     @PostMapping("/createlobby")
     public GameInfoDto AddLobby(@RequestBody String LobbyJson)
@@ -48,9 +51,11 @@ public class GameLobbyController {
             }
             Lobby lobby = new Lobby(playerList);
 
-            Message message = new Message("WebSocket", lobby.toJson(), MessageType.CREATE_LOBBY);
 
-            Server.getExecutor().submit(new MessageExecutor(message));
+            synchronized (gameLogic)
+            {
+                gameLogic.createGame(lobby);
+            }
 
             GameInfoDto gameInfoDto = new GameInfoDto();
 
@@ -59,7 +64,7 @@ public class GameLobbyController {
 
 
         return null;
-
-
     }
+
+
 }
