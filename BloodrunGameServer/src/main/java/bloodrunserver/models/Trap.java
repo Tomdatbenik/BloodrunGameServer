@@ -87,7 +87,7 @@ public class Trap {
                 activationRate++;
                 break;
             case ROTATE_TRAP:
-                float speed = Float.parseFloat(Application.getProperties().getProperty("trap.RotatTrap.RotateSpeed"));
+                float speed = Float.parseFloat(Application.getProperties().getProperty("trap.RotateTrap.RotateSpeed"));
 
                 Rotation rotation = this.transform.getRotation();
 
@@ -104,7 +104,7 @@ public class Trap {
                 this.transform.setRotation(rotation);
                 break;
             case REVERSE_ROTATE_TRAP:
-                float reverseSpeed = Float.parseFloat(Application.getProperties().getProperty("trap.RotatTrap.RotateSpeed"));
+                float reverseSpeed = Float.parseFloat(Application.getProperties().getProperty("trap.RotateTrap.RotateSpeed"));
 
                 Rotation reverseRotation = this.transform.getRotation();
 
