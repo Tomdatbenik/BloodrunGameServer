@@ -45,6 +45,8 @@ public class Dungeon {
                 trapList.add(trap);
             }
 
+            trapList.stream().filter(t->t.getType() == TrapType.OFFSET_SPIKE_TRAP).forEach(t->t.setActivated(true));
+
             Object oSpawnpoints = JSONValue.parse(jsonObject.get("spawnpoints").toString());
             for(Object object : (JSONArray) oSpawnpoints)
             {

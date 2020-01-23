@@ -8,13 +8,21 @@ public class Trap {
     private int id;
     private Transform transform;
     private Scale scale;
-    boolean activated;
+    private boolean activated;
     private TrapType type;
 
     private int activationRate;
 
     public int getId() {
         return id;
+    }
+
+    public TrapType getType() {
+        return type;
+    }
+
+    public void setActivated(boolean activated) {
+        this.activated = activated;
     }
 
     public Trap(int id, Transform transform, Scale scale, boolean activated, TrapType type) {
@@ -53,13 +61,11 @@ public class Trap {
         Boolean activated = Boolean.getBoolean(object.get("activated").toString());
         TrapType type = TrapType.fromInteger(Integer.parseInt(stype));
 
-        return new Trap(id,transform,scale,activated,type);
+        return new Trap(id, transform, scale, activated, type);
     }
 
-    public void activateTrap()
-    {
-        switch (this.type)
-        {
+    public void activateTrap() {
+        switch (this.type) {
             case SPIKE_TRAP:
                 activateSpikeTrap(TrapType.SPIKE_TRAP);
                 break;
@@ -69,13 +75,11 @@ public class Trap {
             case DARTER:
                 int rate = Integer.parseInt(Application.getProperties().getProperty("trap.Darter.ShootRate"));
 
-                if(activationRate == rate)
-                {
+                if (activationRate == rate) {
                     activated = true;
                 }
 
-                if(activated && activationRate > rate)
-                {
+                if (activated && activationRate > rate) {
                     activationRate = 0;
                     activated = false;
                 }
@@ -91,9 +95,8 @@ public class Trap {
 
                 y += speed;
 
-                if(y >= 360)
-                {
-                    y = (float)0;
+                if (y >= 360) {
+                    y = (float) 0;
                 }
 
                 rotation.y = y.toString();
@@ -109,9 +112,8 @@ public class Trap {
 
                 x -= reverseSpeed;
 
-                if(x == 0)
-                {
-                    x = (float)360;
+                if (x == 0) {
+                    x = (float) 360;
                 }
 
                 reverseRotation.x = x.toString();
@@ -123,39 +125,19 @@ public class Trap {
     }
 
 
-    private void activateSpikeTrap(TrapType trap)
-    {
+    private void activateSpikeTrap(TrapType trap) {
         int time = Integer.parseInt(Application.getProperties().getProperty("trap.SpikeTrap.ActivateTime"));
 
-        if(activated && trap == TrapType.SPIKE_TRAP || trap == TrapType.OFFSET_SPIKE_TRAP && !activated)
-        {
-            if(activationRate > time)
-            {
+        if (activated) {
+            if (activationRate > time) {
                 activationRate = 0;
-                if(trap == TrapType.SPIKE_TRAP)
-                {
-                    activated = false;
-                }
-                else
-                {
-                    activated = true;
-                }
-
+                activated = false;
             }
-        }
-        else
-        {
-            if(activationRate > time)
-            {
+        } else {
+            if (activationRate > time) {
                 activationRate = 0;
-                if(trap == TrapType.SPIKE_TRAP)
-                {
-                    activated = true;
-                }
-                else
-                {
-                    activated = false;
-                }
+                activated = true;
+
             }
         }
 
