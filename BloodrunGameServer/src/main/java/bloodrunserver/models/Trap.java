@@ -61,26 +61,10 @@ public class Trap {
         switch (this.type)
         {
             case SPIKE_TRAP:
-                int time = Integer.parseInt(Application.getProperties().getProperty("trap.SpikeTrap.ActivateTime"));
-
-                if(activated)
-                {
-                    if(activationRate > time)
-                    {
-                        activationRate = 0;
-                        activated = false;
-                    }
-                }
-                else
-                {
-                    if(activationRate > time)
-                    {
-                        activationRate = 0;
-                        activated = true;
-                    }
-                }
-
-                activationRate++;
+                activateSpikeTrap(TrapType.SPIKE_TRAP);
+                break;
+            case OFFSET_SPIKE_TRAP:
+                activateSpikeTrap(TrapType.OFFSET_SPIKE_TRAP);
                 break;
             case DARTER:
                 int rate = Integer.parseInt(Application.getProperties().getProperty("trap.Darter.ShootRate"));
@@ -115,7 +99,66 @@ public class Trap {
                 rotation.y = y.toString();
 
                 this.transform.setRotation(rotation);
+                break;
+            case REVERSE_ROTATE_TRAP:
+                float reverseSpeed = Float.parseFloat(Application.getProperties().getProperty("trap.RotatTrap.RotateSpeed"));
+
+                Rotation reverseRotation = this.transform.getRotation();
+
+                Float x = Float.parseFloat(reverseRotation.y);
+
+                x -= reverseSpeed;
+
+                if(x == 0)
+                {
+                    x = (float)360;
+                }
+
+                reverseRotation.x = x.toString();
+
+                this.transform.setRotation(reverseRotation);
+                break;
         }
 
+    }
+
+
+    private void activateSpikeTrap(TrapType trap)
+    {
+        int time = Integer.parseInt(Application.getProperties().getProperty("trap.SpikeTrap.ActivateTime"));
+
+        if(activated && trap == TrapType.SPIKE_TRAP || trap == TrapType.OFFSET_SPIKE_TRAP && !activated)
+        {
+            if(activationRate > time)
+            {
+                activationRate = 0;
+                if(trap == TrapType.SPIKE_TRAP)
+                {
+                    activated = false;
+                }
+                else
+                {
+                    activated = true;
+                }
+
+            }
+        }
+        else
+        {
+            if(activationRate > time)
+            {
+                activationRate = 0;
+                if(trap == TrapType.SPIKE_TRAP)
+                {
+                    activated = true;
+                }
+                else
+                {
+                    activated = false;
+                }
+            }
+        }
+
+        activationRate++;
     }
 }

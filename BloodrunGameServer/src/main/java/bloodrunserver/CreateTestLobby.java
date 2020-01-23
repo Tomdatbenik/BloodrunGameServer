@@ -14,20 +14,20 @@ public class CreateTestLobby {
     //TODO Create test lobby
 
     public void testLobyy() {
-//        List<Player> players = new ArrayList<Player>();
-//
-//        players.add(new Player("Tomdatbenik"));
+        List<Player> players = new ArrayList<Player>();
+
+        players.add(new Player("Tomdatbenik"));
 //        players.add(new Player("SKULLCRUSHER"));
-////        players.add(new Player("Mario"));
-////        players.add(new Player("MrrrLuiigii"));
-//////        players.add(new Player("joostdatbenik"));
-////        players.add(new Player("Sidwell"));
-//
-//        Lobby lobby = new Lobby(players);
-//
-//        Message message = new Message("WebSocket", lobby.toJson(), MessageType.CREATE_LOBBY);
-//
-//        Server.getExecutor().submit(new MessageExecutor(message));
+//        players.add(new Player("Mario"));
+//        players.add(new Player("MrrrLuiigii"));
+////        players.add(new Player("joostdatbenik"));
+//        players.add(new Player("Sidwell"));
+
+        Lobby lobby = new Lobby(players);
+
+        Message message = new Message("WebSocket", lobby.toJson(), MessageType.CREATE_LOBBY);
+
+        Server.getExecutor().submit(new MessageExecutor(message));
 //
 //        players = new ArrayList<Player>();
 //

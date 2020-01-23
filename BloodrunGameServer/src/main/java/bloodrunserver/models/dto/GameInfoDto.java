@@ -18,6 +18,6 @@ public class GameInfoDto {
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
-        this.ip = inetAddress.getHostAddress();
+        this.ip = "25.31.117.245";
     }
 }

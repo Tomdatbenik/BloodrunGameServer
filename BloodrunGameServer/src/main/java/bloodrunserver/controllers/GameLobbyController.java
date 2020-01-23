@@ -35,19 +35,31 @@ public class GameLobbyController {
         {
             if(LobbyDTO.getUserDtoOne() != null)
             {
-                playerList.add(new Player(LobbyDTO.getUserDtoOne().getUsername()));
+                if(LobbyDTO.getUserDtoOne().getId() != 0)
+                {
+                    playerList.add(new Player(LobbyDTO.getUserDtoOne().getUsername()));
+                }
             }
             if(LobbyDTO.getUserDtoTwo() != null)
             {
-                playerList.add(new Player(LobbyDTO.getUserDtoTwo().getUsername()));
+                if(LobbyDTO.getUserDtoTwo().getId() != 0)
+                {
+                    playerList.add(new Player(LobbyDTO.getUserDtoTwo().getUsername()));
+                }
             }
             if(LobbyDTO.getUserDtoThree() != null)
             {
-                playerList.add(new Player(LobbyDTO.getUserDtoThree().getUsername()));;
+                if(LobbyDTO.getUserDtoThree().getId() != 0)
+                {
+                    playerList.add(new Player(LobbyDTO.getUserDtoThree().getUsername()));
+                }
             }
             if(LobbyDTO.getUserDtoFour() != null)
             {
-                playerList.add(new Player(LobbyDTO.getUserDtoFour().getUsername()));
+                if(LobbyDTO.getUserDtoFour().getId() != 0)
+                {
+                    playerList.add(new Player(LobbyDTO.getUserDtoFour().getUsername()));
+                }
             }
             Lobby lobby = new Lobby(playerList);
 
