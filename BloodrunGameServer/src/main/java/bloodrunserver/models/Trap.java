@@ -110,13 +110,13 @@ public class Trap {
 
                 Float x = Float.parseFloat(reverseRotation.y);
 
-                x -= reverseSpeed;
-
                 if (x == 0) {
                     x = (float) 360;
                 }
 
-                reverseRotation.x = x.toString();
+                x -= reverseSpeed;
+
+                reverseRotation.y = x.toString();
 
                 this.transform.setRotation(reverseRotation);
                 break;
